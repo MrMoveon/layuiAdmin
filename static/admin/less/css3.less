@@ -1,0 +1,90 @@
+//**
+// * font-face 自定义字体
+// * @params        @path: 字体路径; @font-name: 字体名字; 需要同时存在eot woff ttf svg
+// */
+
+.font-face(@path, @font-name){
+        @font-face{
+                font-family: @font-name;
+                src: url('@{path}/@{font-name}.eot'); /* IE9 Compat Modes */
+                src: url('@{path}/@{font-name}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                     url('@{path}/@{font-name}.woff') format('woff'), /* Modern Browsers */
+                     url('@{path}/@{font-name}.ttf')  format('truetype'), /* Safari, Android, iOS */
+                     url('@{path}/@{font-name}.svg#svgFontName') format('svg'); /* Legacy iOS */
+        }
+}
+/*圆角*/
+.border-radius(@arg:4px){
+    -webkit-border-radius: @arg;
+    -moz-border-radius: @arg;
+    -ms-border-radius: @arg;
+    border-radius: @arg;
+}
+.border-top-left-radius(@arg:4px){
+    -webkit-border-top-left-radius:@arg;
+    -moz-border-top-left-radius:@arg;
+    -ms-border-top-left-radius:@arg;
+     border-top-left-radius:@arg;
+    
+}
+.border-top-right-radius(@arg:4px){
+     -webkit-border-top-right-radius: @arg;
+     -moz-border-top-right-radius: @arg;
+     -ms-border-top-right-radius: @arg;
+      border-top-right-radius: @arg;
+}
+.border-bottom-left-radius(@arg:4px){
+    -webkit-border-bottom-left-radius:@arg;
+    -moz-border-bottom-left-radius:@arg;
+    -ms-border-bottom-left-radius:@arg;
+     border-bottom-left-radius:@arg;
+    
+}
+.border-bottom-right-radius(@arg:4px){
+     -webkit-border-bottom-right-radius: @arg;
+     -moz-border-bottom-right-radius: @arg;
+     -ms-border-bottom-right-radius: @arg;
+      border-bottom-right-radius: @arg;
+      
+}
+/*阴影*/
+.box-shadow(@arg){
+    -webkit-box-shadow: @arg;
+    -moz-box-shadow: @arg;
+    -ms-box-shadow: @arg;
+     box-shadow: @arg;
+}
+/*字体*/
+.fs(@arg:12px){
+    font-size: @arg;
+}
+/*动画属性*/
+.transition(@arg){
+    -webkit-transition:@arg;
+    -moz-transition:@arg;
+    -ms-transition:@arg;
+    transition:@arg;
+}
+.transform(@arg){
+    -webkit-transform:@arg;
+    -moz-transform: @arg;
+    -ms-transform: @arg;
+    transform: @arg;
+}
+
+/*清楚浮动*/
+.clearfix(){
+    zoom: 1;
+    &:after{
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
+
+
+.box-sizing(@arg){
+    -moz-box-sizing:@arg; 
+    -webkit-box-sizing:@arg; 
+     box-sizing:@arg;
+}
