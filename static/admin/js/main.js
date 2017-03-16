@@ -18,7 +18,7 @@ layui.use(['layer', 'form','element','jquery'], function(){
 			return;
 		}else{
 			var index = layer.load(2);
-			//创建tab
+			//ajax 获取内容 创建tab
 			$.ajax({
 				type:"get",
 				url:url,
