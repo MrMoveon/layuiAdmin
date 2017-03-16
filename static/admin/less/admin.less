@@ -189,14 +189,21 @@
         border-radius: 0;
         border-bottom: 3px solid #00b5f9;
     }
+    //去掉后台主页tab的关闭按钮
+    .welcome{
+        .layui-tab-close{
+            display: none;
+        }
+    }
     .layui-tab-content{
         position: absolute;
         right: 0;
         left: 0;
         bottom: 0;
-        top: 42px;
+        top: 41px;
         padding: 0;
         overflow-y: auto;
+        background: #f5f5f5;
     }
 }
 
