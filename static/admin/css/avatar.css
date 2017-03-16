@@ -1,0 +1,56 @@
+/*3.6.3 头像
+    Name:           mod_avatar
+    Example:        <i class="avatar avatar-L radius"><img src="static/h-ui/images/ucenter/avatar-default.jpg"></i>
+*/
+.avatar {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.avatar img {
+  display: block;
+}
+.avatar.radius,
+.avatar.radius img {
+  border-radius: 50%;
+}
+.avatar,
+.avatar img {
+  width: 32px;
+  height: 32px;
+}
+.avatar.size-MINI {
+  width: 16px;
+  height: 16px;
+}
+.avatar.size-S,
+.avatar.size-S img {
+  width: 24px;
+  height: 24px;
+}
+.avatar.size-M,
+.avatar.size-M img {
+  width: 32px;
+  height: 32px;
+}
+/*默认为中，可以不写，可以理解为：均码*/
+.avatar.size-L,
+.avatar.size-L img {
+  width: 40px;
+  height: 40px;
+}
+.avatar.size-XL,
+.avatar.size-XL img {
+  width: 64px;
+  height: 64px;
+}
+.avatar.size-XXL,
+.avatar.size-XXL img {
+  width: 100px;
+  height: 100px;
+}
+.avatar.size-XXXL,
+.avatar.size-XXXL img {
+  width: 128px;
+  height: 128px;
+}

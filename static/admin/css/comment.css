@@ -1,0 +1,90 @@
+.commentList .item {
+  list-style: none outside none;
+  margin: 1.6rem 0 0;
+}
+.commentList .avatar {
+  border: 1px solid transparent;
+  float: left;
+}
+.comment-main {
+  position: relative;
+  margin-left: 64px;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+}
+.comment-main:after,
+.comment-main:before {
+  position: absolute;
+  top: 11px;
+  left: -16px;
+  right: 100%;
+  width: 0;
+  height: 0;
+  display: block;
+  content: " ";
+  border-color: transparent;
+  border-style: solid solid outset;
+  pointer-events: none;
+}
+.comment-main:before {
+  border-right-color: #dedede;
+  border-width: 8px;
+}
+.comment-main:after {
+  border-width: 7px;
+  border-right-color: #f8f8f8;
+  margin-top: 1px;
+  margin-left: 2px;
+}
+.comment-header {
+  padding: 10px 15px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #eee;
+}
+.comment-title {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+.comment-meta {
+  font-size: 13px;
+  color: #999;
+  line-height: 1.2;
+}
+.comment-meta a {
+  color: #999;
+}
+.comment-author {
+  font-weight: 700;
+  color: #999;
+}
+.comment-body {
+  padding: 15px;
+  overflow: hidden;
+}
+.comment-body > :last-child {
+  margin-bottom: 0;
+}
+.commentList .comment-flip .avatar {
+  float: right;
+}
+.comment-flip .comment-main {
+  margin-left: 0;
+  margin-right: 64px;
+}
+.comment-flip .comment-main:before {
+  border-left-color: #dedede;
+  border-right-color: transparent;
+}
+.comment-flip .comment-main:after,
+.comment-flip .comment-main:before {
+  left: 100%;
+  position: absolute;
+  right: -16px;
+}
+.comment-flip .comment-main:after {
+  border-left-color: #f8f8f8;
+  border-right-color: transparent;
+  margin-left: auto;
+  margin-right: 2px;
+}
