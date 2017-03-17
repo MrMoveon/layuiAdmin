@@ -3,7 +3,7 @@
 		<div class="layui-form">
 			<div class="layui-form-item">
 				<div class="layui-inline">
-					<button class="layui-btn layui-btn-small layui-btn-normal addBtn"><i class="layui-icon">&#xe654;</i></button>
+					<button class="layui-btn layui-btn-small layui-btn-normal addBtn" id="list-add-btn"><i class="layui-icon">&#xe654;</i></button>
 					<button class="layui-btn layui-btn-small layui-btn-danger delBtn"><i class="layui-icon">&#xe640;</i></button>
 				</div>
 				<div class="layui-inline">
@@ -21,6 +21,7 @@
 					<div class="layui-input-inline">
 						<input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">
 					</div>
+					<button class="layui-btn layui-btn-normal">搜索</button>
 				</div>
 			</div>
 		</div>
@@ -60,8 +61,8 @@
 					<td><button class="layui-btn layui-btn-mini layui-btn-normal">正常</button></td>
 					<td>
 						<div class="layui-inline">
-							<button class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe642;</i></button>
-							<button class="layui-btn layui-btn-small layui-btn-danger"><i class="layui-icon">&#xe640;</i></button>
+							<button class="layui-btn layui-btn-small layui-btn-normal "><i class="layui-icon">&#xe642;</i></button>
+							<button class="layui-btn layui-btn-small layui-btn-danger del-btn"><i class="layui-icon">&#xe640;</i></button>
 						</div>
 					</td>
 				</tr>
@@ -206,12 +207,26 @@
 	</div>
 </div>
 <script>
-	layui.use(['form', 'jquery', 'laydate','laypage'], function() {
+	layui.use(['form', 'jquery', 'laydate','laypage','dialog'], function() {
 		var form = layui.form(),
 			layer = layui.layer,
 			$ = layui.jquery,
 			laypage=layui.laypage,
-			laydate = layui.laydate;
+			laydate = layui.laydate,
+			dialog = layui.dialog;
+			
+		
+		//删除
+		$('.del-btn').on('click',function(){
+			dialog.confirm({
+				'message':'确定要删除吗？',
+				'success':function(){
+					console.log('删除成功');
+					layer.closeAll();
+					},
+				'cancel':function(){}
+			});
+		})	
 		//提示
 		$('.addBtn').mouseenter(function(){
 			layer.tips('添加', '.addBtn', {
@@ -226,6 +241,15 @@
 				time: 1000
 			});
 		})	
+		$('#list-add-btn').on('click',function(){
+			layer.open({
+			  type: 2,
+			  area: ['700px', '560px'],
+			  fixed: false, //不固定
+			  maxmin: true,
+			  content: 'add.html'
+			});
+		})
 		//全选
 		form.on('checkbox(allChoose)', function(data) {
 			var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]');
