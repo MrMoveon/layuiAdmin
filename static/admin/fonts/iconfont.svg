@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Thu Mar 16 16:00:30 2017
+Created by FontForge 20120731 at Sat Mar 18 21:40:11 2017
  By admin
 </metadata>
 <defs>
@@ -19,7 +19,7 @@ Created by FontForge 20120731 at Thu Mar 16 16:00:30 2017
     bbox="-1.14286 -212 1024 896"
     underline-thickness="0"
     underline-position="0"
-    unicode-range="U+0078-E628"
+    unicode-range="U+0078-E639"
   />
 <missing-glyph 
  />
@@ -98,6 +98,9 @@ q-7 -39 -7 -78t7 -78q79 -33 124 -111q45 -77 34 -162q62 -52 135 -79q69 52 158 52t
 t39 -95t95 -39t95 39t39 95t-39 95t-95 39z" />
     <glyph glyph-name="shangsheng" unicode="&#xe628;" 
 d="M512 672l-224 -288h149v-288h149l1 288h149z" />
+    <glyph glyph-name="fajianxiang" unicode="&#xe639;" 
+d="M895 469l-125 148q-46 57 -87 57h-342q-38 0 -87 -57l-125 -148q-21 -28 -21 -99v-206q0 -29 20.5 -49.5t49.5 -20.5h668q29 0 49.5 20.5t20.5 49.5v206q0 73 -21 99zM297 599q25 28 44 28h342q22 0 44 -28l125 -149q5 -7 3.5 -8.5t-9.5 -1.5h-218q-9 0 -16 -7t-7 -16
+v-23q0 -39 -27.5 -66t-65.5 -27t-65.5 27t-27.5 66v23q0 9 -7 16t-16 7h-218q-14 0 -6 10zM869 164q0 -10 -6.5 -16.5t-16.5 -6.5h-668q-10 0 -16.5 6.5t-6.5 16.5v206q0 10 6.5 17t16.5 7h194q0 -58 41 -99t99 -41t99 41t41 99h194q10 0 16.5 -7t6.5 -17v-206z" />
     <glyph glyph-name="xiajiang" unicode="&#xe60f;" 
 d="M512 96l224 288h-149v288h-149l-1 -288h-149z" />
   </font>

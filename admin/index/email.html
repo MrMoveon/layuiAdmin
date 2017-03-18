@@ -1,0 +1,111 @@
+<div class="email-wrap clearfix">
+	<div class="row">
+		<div class="email-edge col-lg-3">
+			<button class="layui-btn layui-btn-normal email-write-btn">写信</button>
+			<dl class="email-folder">
+				<dt>文件夹</dt>
+				<dd>
+					<a href="javascript:;"><i class="iconfont">&#xe639;</i>收件箱<button class="layui-btn  layui-btn-danger layui-btn-mini f-r">12</button></a>
+				</dd>
+				<dd>
+					<a href="javascript:;"><i class="iconfont">&#xe603;</i>发信</a>
+				</dd>
+				<dd>
+					<a href="javascript:;"><i class="iconfont">&#xe602;</i>草稿<button class="layui-btn layui-btn-warm layui-btn-mini f-r">2</button></a>
+				</dd>
+				<dd>
+					<a href="javascript:;"><i class="layui-icon">&#xe640;</i>垃圾箱</a>
+				</dd>
+			</dl>
+			<dl class="email-classify">
+				<dt>分类</dt>
+				<dd>
+					<a href="javascript:;"><i class="layui-icon icon-blue">&#xe617;</i>工作</a>
+				</dd>
+				<dd>
+					<a href="javascript:;"><i class="layui-icon icon-green">&#xe617;</i>文档</a>
+				</dd>
+				<dd>
+					<a href="javascript:;"><i class="layui-icon icon-wran">&#xe617;</i>社交</a>
+				</dd>
+				<dd>
+					<a href="javascript:;"><i class="layui-icon icon-red">&#xe617;</i>广告</a>
+				</dd>
+				<dd>
+					<a href="javascript:;"><i class="layui-icon icon-gray">&#xe617;</i>客户端</a>
+				</dd>
+			</dl>
+			<dl class="email-label">
+				<dt>标签</dt>
+				<dd>
+					<button class="layui-btn layui-btn-primary layui-btn-small">朋友</button>
+					<button class="layui-btn layui-btn-primary layui-btn-small">工作</button>
+					<button class="layui-btn layui-btn-primary layui-btn-small">孩子</button>
+					<button class="layui-btn layui-btn-primary layui-btn-small">关系</button>
+					<button class="layui-btn layui-btn-primary layui-btn-small">家庭</button>
+					<button class="layui-btn layui-btn-primary layui-btn-small">电影</button>
+				</dd>
+				
+			</dl>
+		</div>
+		<div class="col-lg-9">
+			<div class="email-content">
+				<div class="email-content-title">
+					<span class="write-title">写信</span>
+					<div class="f-r">
+						<button class="layui-btn layui-btn-primary layui-btn-small"><i class="layui-icon">&#xe642;</i>存为草稿</button>
+						<button class="layui-btn layui-btn-danger layui-btn-small"><i class="layui-icon">&#x1006;</i>放弃</button>
+					</div>
+				</div>
+				<form class="layui-form">
+					<div class="layui-form-item">
+						<label class="layui-form-label">发送到</label>
+						<div class="layui-input-block">
+							<input type="text" name="name" lay-verify="name" autocomplete="off" placeholder="请输入收件人" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">主题</label>
+						<div class="layui-input-block">
+							<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入主题" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item layui-form-text">
+						<label class="layui-form-label">编辑器</label>
+						<div class="layui-input-block">
+							<textarea class="layui-textarea layui-hide" name="content" lay-verify="content" id="LAY_demo_editor"></textarea>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-input-block">
+							<button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="demo1"><i class="layui-icon">&#xe609;</i> 立即发送</button>
+							<button type="reset" class="layui-btn layui-btn-primary"><i class="layui-icon">&#x1006;</i> 放弃</button>
+							<button class="layui-btn layui-btn-primary "><i class="layui-icon">&#xe642;</i> 存为草稿</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+	<script>
+layui.use(['form', 'layedit', 'laydate'], function(){
+  var form = layui.form()
+  ,layer = layui.layer
+  ,layedit = layui.layedit
+  ,laydate = layui.laydate;
+  
+  //创建一个编辑器
+  var editIndex = layedit.build('LAY_demo_editor');
+ 
+  //监听提交
+  form.on('submit(demo1)', function(data){
+    layer.alert(JSON.stringify(data.field), {
+      title: '最终的提交信息'
+    })
+    return false;
+  });
+  
+  
+});
+</script>
