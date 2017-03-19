@@ -1,0 +1,126 @@
+//welcome
+.welcome-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 15px 0;
+}
+/***********welcome***********/
+.welcome-left-container {
+    .data-show {
+        li {
+            height: 95px;
+            margin-bottom: 15px;
+        }
+        a {
+            display: block;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ebeaea;
+            .box-sizing(border-box);
+        }
+        .icon-bg {
+            width: 68px;
+            height: 68px;
+            text-align: center;
+            .border-radius(70px);
+            .iconfont {
+                color: #fff;
+                font-size: 36px;
+                position: relative;
+                top: 15px;
+            }
+        }
+        .bg-org {
+            background: #f8bb74;
+        }
+        .bg-blue {
+            background: #86d2ee;
+        }
+        .bg-green {
+            background: #94e0e1;
+        }
+        .right-text-con {
+            padding-left: 78px;
+        }
+        p {
+            margin: 0;
+            color: #a0a8b4;
+        }
+        .color-org,
+        .color-blue,
+        .color-green {
+            font-size: 28px;
+            padding-right: 10px;
+            font-family: "arial";
+        }
+        .color-org {
+            color: #f8bb74;
+        }
+        .color-blue {
+            color: #86d2ee;
+        }
+        .color-green {
+            color: #94e0e1;
+        }
+        .name {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555555;
+        }
+    }
+    .chart-panel {
+        margin: 0px 15px 15px;
+    }
+    .server-panel {
+        margin: 15px;
+        .panel-header{
+            padding-bottom: 0;
+        }
+        .panel-body {
+            div {
+                padding: 0;
+            }
+        }
+        .title {
+            background: #f2f2f2;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 15px;
+            margin: 0;
+        }
+        span {
+            height: 30px;
+            padding-top: 10px;
+            padding-left: 15px;
+            display: block;
+            background: #fafafa;
+        }
+    }
+}
+.welcome-edge {
+    padding: 0 30px 15px 0;
+    .commentbox {
+        background: #fff;
+    }
+    .comment-panel {
+        .panel-body {
+            padding-top: 10px;
+        }
+        .commentList .item {
+            margin: 0 0 20px;
+        }
+    }
+    .contact-panel {
+        margin-top: 15px;
+        .panel-header{
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media all and (max-width:1200px){
+    .welcome-edge{padding: 0 30px 15px 30px;}
+}

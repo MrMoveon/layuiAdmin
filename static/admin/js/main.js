@@ -1,7 +1,8 @@
 layui.config({
   base: '/layuiAdmin/static/admin/js/module/' //假设这是test.js所在的目录
 }).extend({ //设定模块别名
-  dialog: 'dialog' //如果test.js是在根目录，也可以不用设定别名
+  dialog: 'dialog', //如果test.js是在根目录，也可以不用设定别名
+  load:'load'
 });
 
 

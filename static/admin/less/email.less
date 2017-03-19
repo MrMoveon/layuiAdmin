@@ -4,7 +4,7 @@
     width: 100%;
     padding: 15px;
     background: #f5f5f5;
-     overflow-x: hidden;
+    overflow-x: hidden;
     overflow-y: auto;
     .email-write-btn{
         width: 100%;
@@ -68,11 +68,19 @@
     }
     .email-label{
          padding-top: 20px;
+         padding-bottom: 20px;
          dt{
             font-size: 14px;
             font-weight: bold;
             color: #333;
             line-height: 32px;
+        }
+        .layui-btn{
+            margin-bottom: 10px;
+        }
+        .layui-btn+.layui-btn {
+            margin-left:0px;
+            margin-right:0px;
         }
     }
     .email-content{
@@ -80,6 +88,7 @@
         background: #fff;
         height: 100%;
         width: 100%;
+        overflow: auto;
         padding: 15px;
     }
     .email-content-title{
@@ -87,5 +96,20 @@
         .write-title{
             font-size: 20px;
         }
+    }
+    .email-tool-btn{
+        margin-top: 3px;
+        padding: 0 15px;
+       .layui-form-item{
+           margin: 0;
+           .layui-inline{
+               margin-bottom: 0;
+           }
+       }
+    }
+    .email-list{
+        overflow: auto;
+        height: 100%;
+        padding: 0 15px;
     }
 }

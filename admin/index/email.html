@@ -1,20 +1,20 @@
-<div class="email-wrap clearfix">
+<div class="wrap-container email-wrap clearfix">
 	<div class="row">
-		<div class="email-edge col-lg-3">
-			<button class="layui-btn layui-btn-normal email-write-btn">写信</button>
+		<div class="email-edge col-lg-2">
+			<button class="layui-btn layui-btn-normal email-write-btn" id="write-email-btn">写信</button>
 			<dl class="email-folder">
 				<dt>文件夹</dt>
 				<dd>
-					<a href="javascript:;"><i class="iconfont">&#xe639;</i>收件箱<button class="layui-btn  layui-btn-danger layui-btn-mini f-r">12</button></a>
+					<a href="javascript:;" data-url="email-list.html"><i class="iconfont">&#xe639;</i>收件箱<button class="layui-btn  layui-btn-danger layui-btn-mini f-r">12</button></a>
 				</dd>
 				<dd>
-					<a href="javascript:;"><i class="iconfont">&#xe603;</i>发信</a>
+					<a href="javascript:;" data-url="email-list.html"><i class="iconfont">&#xe603;</i>发信</a>
 				</dd>
 				<dd>
-					<a href="javascript:;"><i class="iconfont">&#xe602;</i>草稿<button class="layui-btn layui-btn-warm layui-btn-mini f-r">2</button></a>
+					<a href="javascript:;" data-url="email-list.html"><i class="iconfont">&#xe602;</i>草稿<button class="layui-btn layui-btn-warm layui-btn-mini f-r">2</button></a>
 				</dd>
 				<dd>
-					<a href="javascript:;"><i class="layui-icon">&#xe640;</i>垃圾箱</a>
+					<a href="javascript:;" data-url="email-list.html"><i class="layui-icon">&#xe640;</i>垃圾箱</a>
 				</dd>
 			</dl>
 			<dl class="email-classify">
@@ -48,64 +48,29 @@
 				
 			</dl>
 		</div>
-		<div class="col-lg-9">
+		<div class="col-lg-10">
 			<div class="email-content">
-				<div class="email-content-title">
-					<span class="write-title">写信</span>
-					<div class="f-r">
-						<button class="layui-btn layui-btn-primary layui-btn-small"><i class="layui-icon">&#xe642;</i>存为草稿</button>
-						<button class="layui-btn layui-btn-danger layui-btn-small"><i class="layui-icon">&#x1006;</i>放弃</button>
-					</div>
-				</div>
-				<form class="layui-form">
-					<div class="layui-form-item">
-						<label class="layui-form-label">发送到</label>
-						<div class="layui-input-block">
-							<input type="text" name="name" lay-verify="name" autocomplete="off" placeholder="请输入收件人" class="layui-input">
-						</div>
-					</div>
-					<div class="layui-form-item">
-						<label class="layui-form-label">主题</label>
-						<div class="layui-input-block">
-							<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入主题" class="layui-input">
-						</div>
-					</div>
-					<div class="layui-form-item layui-form-text">
-						<label class="layui-form-label">编辑器</label>
-						<div class="layui-input-block">
-							<textarea class="layui-textarea layui-hide" name="content" lay-verify="content" id="LAY_demo_editor"></textarea>
-						</div>
-					</div>
-					<div class="layui-form-item">
-						<div class="layui-input-block">
-							<button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="demo1"><i class="layui-icon">&#xe609;</i> 立即发送</button>
-							<button type="reset" class="layui-btn layui-btn-primary"><i class="layui-icon">&#x1006;</i> 放弃</button>
-							<button class="layui-btn layui-btn-primary "><i class="layui-icon">&#xe642;</i> 存为草稿</button>
-						</div>
-					</div>
-				</form>
+				
 			</div>
 		</div>
 	</div>
 </div>
-	<script>
-layui.use(['form', 'layedit', 'laydate'], function(){
-  var form = layui.form()
-  ,layer = layui.layer
-  ,layedit = layui.layedit
-  ,laydate = layui.laydate;
-  
-  //创建一个编辑器
-  var editIndex = layedit.build('LAY_demo_editor');
- 
-  //监听提交
-  form.on('submit(demo1)', function(data){
-    layer.alert(JSON.stringify(data.field), {
-      title: '最终的提交信息'
-    })
-    return false;
-  });
-  
-  
-});
+<script>
+	layui.use(['jquery','load'],function(){
+		var $=layui.jquery,
+			load=layui.load;
+		//默认加载email列表
+		load.page('email-list.html','.email-content');
+		//写信
+		$('#write-email-btn').on('click',function(){
+			load.page('email-write.html','.email-content');
+		})
+		//列表
+		$('.email-folder').on('click','a',function(){
+			var url=$(this).attr('data-url');
+			load.page(url,'.email-content');
+			
+		})
+	})
+	
 </script>

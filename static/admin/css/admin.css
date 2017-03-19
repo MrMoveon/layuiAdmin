@@ -1012,103 +1012,6 @@
   width: 128px;
   height: 128px;
 }
-.email-wrap {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-  padding: 15px;
-  background: #f5f5f5;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.email-wrap .email-write-btn {
-  width: 100%;
-}
-.email-wrap .email-folder {
-  padding-top: 20px;
-}
-.email-wrap .email-folder dt {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  line-height: 32px;
-}
-.email-wrap .email-folder dd {
-  font-size: 12px;
-  color: #545454;
-  line-height: 32px;
-  border-bottom: 1px solid #eee;
-}
-.email-wrap .email-folder dd button {
-  margin-top: 4px;
-}
-.email-wrap .email-folder dd .iconfont,
-.email-wrap .email-folder dd .layui-icon {
-  float: left;
-  padding-right: 10px;
-  font-size: 16px;
-}
-.email-wrap .email-classify {
-  padding-top: 20px;
-}
-.email-wrap .email-classify dt {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  line-height: 32px;
-}
-.email-wrap .email-classify dd {
-  font-size: 12px;
-  color: #545454;
-  line-height: 32px;
-}
-.email-wrap .email-classify dd .iconfont,
-.email-wrap .email-classify dd .layui-icon {
-  float: left;
-  padding-right: 10px;
-  font-size: 14px;
-}
-.email-wrap .email-classify dd .icon-blue {
-  color: #01AAED;
-}
-.email-wrap .email-classify dd .icon-green {
-  color: #009688;
-}
-.email-wrap .email-classify dd .icon-wran {
-  color: #F7B824;
-}
-.email-wrap .email-classify dd .icon-red {
-  color: #FF5722;
-}
-.email-wrap .email-classify dd .icon-gray {
-  color: #2F4056;
-}
-.email-wrap .email-label {
-  padding-top: 20px;
-}
-.email-wrap .email-label dt {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  line-height: 32px;
-}
-.email-wrap .email-content {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  background: #fff;
-  height: 100%;
-  width: 100%;
-  padding: 15px;
-}
-.email-wrap .email-content-title {
-  padding: 15px 15px 30px;
-}
-.email-wrap .email-content-title .write-title {
-  font-size: 20px;
-}
 .f-l {
   float: left;
 }
@@ -1147,6 +1050,10 @@
 }
 .layui-form-select dl dd.layui-this {
   background: #f2f2f2;
+  color: #333;
+}
+.layui-btn-primary:hover {
+  border-color: #1E9FFF;
   color: #333;
 }
 /*清楚浮动*/
@@ -1301,6 +1208,7 @@
   right: 0;
   bottom: 0;
   top: 60px;
+  overflow: hidden;
 }
 .main-layout-tab {
   margin-top: 0;
@@ -1332,15 +1240,141 @@
   width: 100%;
   height: 100%;
 }
+.wrap-container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 15px;
+}
+.email-wrap {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+  background: #f5f5f5;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.email-wrap .email-write-btn {
+  width: 100%;
+}
+.email-wrap .email-folder {
+  padding-top: 20px;
+}
+.email-wrap .email-folder dt {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  line-height: 32px;
+}
+.email-wrap .email-folder dd {
+  font-size: 12px;
+  color: #545454;
+  line-height: 32px;
+  border-bottom: 1px solid #eee;
+}
+.email-wrap .email-folder dd button {
+  margin-top: 4px;
+}
+.email-wrap .email-folder dd .iconfont,
+.email-wrap .email-folder dd .layui-icon {
+  float: left;
+  padding-right: 10px;
+  font-size: 16px;
+}
+.email-wrap .email-classify {
+  padding-top: 20px;
+}
+.email-wrap .email-classify dt {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  line-height: 32px;
+}
+.email-wrap .email-classify dd {
+  font-size: 12px;
+  color: #545454;
+  line-height: 32px;
+}
+.email-wrap .email-classify dd .iconfont,
+.email-wrap .email-classify dd .layui-icon {
+  float: left;
+  padding-right: 10px;
+  font-size: 14px;
+}
+.email-wrap .email-classify dd .icon-blue {
+  color: #01AAED;
+}
+.email-wrap .email-classify dd .icon-green {
+  color: #009688;
+}
+.email-wrap .email-classify dd .icon-wran {
+  color: #F7B824;
+}
+.email-wrap .email-classify dd .icon-red {
+  color: #FF5722;
+}
+.email-wrap .email-classify dd .icon-gray {
+  color: #2F4056;
+}
+.email-wrap .email-label {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.email-wrap .email-label dt {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  line-height: 32px;
+}
+.email-wrap .email-label .layui-btn {
+  margin-bottom: 10px;
+}
+.email-wrap .email-label .layui-btn + .layui-btn {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.email-wrap .email-content {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding: 15px;
+}
+.email-wrap .email-content-title {
+  padding: 15px 15px 30px;
+}
+.email-wrap .email-content-title .write-title {
+  font-size: 20px;
+}
+.email-wrap .email-tool-btn {
+  margin-top: 3px;
+  padding: 0 15px;
+}
+.email-wrap .email-tool-btn .layui-form-item {
+  margin: 0;
+}
+.email-wrap .email-tool-btn .layui-form-item .layui-inline {
+  margin-bottom: 0;
+}
+.email-wrap .email-list {
+  overflow: auto;
+  height: 100%;
+  padding: 0 15px;
+}
 .welcome-container {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 15px 0;
-}
-.wrap-container {
-  overflow: hidden;
-  padding: 15px;
 }
 /***********welcome***********/
 .welcome-left-container .data-show li {
@@ -1453,7 +1487,7 @@
   padding-bottom: 0;
 }
 @media all and (max-width: 1200px) {
-  .index-right {
+  .welcome-edge {
     padding: 0 30px 15px 30px;
   }
 }

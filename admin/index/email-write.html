@@ -1,0 +1,55 @@
+<div class="email-content-title">
+	<span class="write-title">写信</span>
+	<div class="f-r">
+		<button class="layui-btn layui-btn-primary layui-btn-small"><i class="layui-icon">&#xe642;</i>存为草稿</button>
+		<button class="layui-btn layui-btn-danger layui-btn-small"><i class="layui-icon">&#x1006;</i>放弃</button>
+	</div>
+</div>
+<form class="layui-form">
+	<div class="layui-form-item">
+		<label class="layui-form-label">发送到</label>
+		<div class="layui-input-block">
+			<input type="text" name="name" lay-verify="name" autocomplete="off" placeholder="请输入收件人" class="layui-input">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">主题</label>
+		<div class="layui-input-block">
+			<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入主题" class="layui-input">
+		</div>
+	</div>
+	<div class="layui-form-item layui-form-text">
+		<label class="layui-form-label">编辑器</label>
+		<div class="layui-input-block">
+			<textarea class="layui-textarea layui-hide" name="content" lay-verify="content" id="LAY_demo_editor"></textarea>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<div class="layui-input-block">
+			<button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="demo1"><i class="layui-icon">&#xe609;</i> 立即发送</button>
+			<button type="reset" class="layui-btn layui-btn-primary"><i class="layui-icon">&#x1006;</i> 放弃</button>
+			<button class="layui-btn layui-btn-primary "><i class="layui-icon">&#xe642;</i> 存为草稿</button>
+		</div>
+	</div>
+</form>
+<script>
+	layui.use(['form', 'layedit', 'laydate'], function(){
+	  var form = layui.form()
+	  ,layer = layui.layer
+	  ,layedit = layui.layedit
+	  ,laydate = layui.laydate;
+	  
+	  //创建一个编辑器
+	  var editIndex = layedit.build('LAY_demo_editor');
+	  
+	  //监听提交
+	  form.on('submit(demo1)', function(data){
+	    layer.alert(JSON.stringify(data.field), {
+	      title: '最终的提交信息'
+	    })
+	    return false;
+	  });
+	  
+	  
+	});
+</script>
