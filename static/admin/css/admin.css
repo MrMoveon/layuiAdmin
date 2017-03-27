@@ -1293,6 +1293,12 @@
   overflow-x: hidden;
   overflow-y: auto;
   padding: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.iframe {
+  border: 0;
 }
 .email-wrap {
   -moz-box-sizing: border-box;
@@ -1394,23 +1400,26 @@
   overflow: auto;
   padding: 15px;
 }
-.email-wrap .email-content-title {
+.iframe-h {
+  height: 100%;
+}
+.email-content-title {
   padding: 15px 15px 30px;
 }
-.email-wrap .email-content-title .write-title {
+.email-content-title .write-title {
   font-size: 20px;
 }
-.email-wrap .email-tool-btn {
+.email-tool-btn {
   margin-top: 3px;
   padding: 0 15px;
 }
-.email-wrap .email-tool-btn .layui-form-item {
+.email-tool-btn .layui-form-item {
   margin: 0;
 }
-.email-wrap .email-tool-btn .layui-form-item .layui-inline {
+.email-tool-btn .layui-form-item .layui-inline {
   margin-bottom: 0;
 }
-.email-wrap .email-list {
+.email-list {
   overflow: auto;
   height: 100%;
   padding: 0 15px;

@@ -1,8 +1,7 @@
-layui.define(['jquery','layer'],function(exports){ 
-	var $=layui.jquery,
-		layer=layui.layer;
-  	var load = {
-		page:function(url,id){
+layui.define(['jquery'],function(exports){
+	var $=layui.jquery;
+  	var tool = {
+		removeByValue:function(url,id){
 			var index = layer.load(2);
 			$.ajax({
 				method:"get",

@@ -27,25 +27,14 @@ layui.use(['layer', 'form','element','jquery','dialog'], function(){
 			element.tabChange('tab', id);
 			return;
 		}else{
-			var index = layer.load(2);
-			//ajax 获取内容 创建tab
-			$.ajax({
-				type:"get",
-				url:url,
-				success:function(data){
-					setTimeout(function(){
-						layer.close(index);
-						element.tabAdd('tab', {
-						  title: text,
-						  content: data,
-						  id: id
-						});  
-						element.tabChange('tab', id);
-						form.render();
-					},1000);
-					
-				}
+
+            element.tabAdd('tab', {
+			  title: text,
+			  content: '<iframe src="'+url+'" name="iframe'+id+'" class="iframe" framborder="0" data-id="'+id+'" scrolling="auto" width="100%"  height="100%"></iframe>',
+			  id: id
 			});
+            element.tabChange('tab', id);
+
 			
 		}
 	});
@@ -58,18 +47,18 @@ layui.use(['layer', 'form','element','jquery','dialog'], function(){
 		}
 	})
 	//默认ajax加载welcome
-	var index = layer.load(2);
-	$.ajax({
-		type:"get",
-		url:scope.link,
-		success:function(data){
-			setTimeout(function(){
-				layer.close(index);
-				$('.layui-tab-item').eq(0).html(data);
-			},1000);
-			
-		}
-	});
+//	var index = layer.load(2);
+//	$.ajax({
+//		type:"get",
+//		url:scope.link,
+//		success:function(data){
+//			setTimeout(function(){
+//				layer.close(index);
+//				$('.layui-tab-item').eq(0).html(data);
+//			},1000);
+//			
+//		}
+//	});
 	
 	//示范一个公告层
 /*	layer.open({
@@ -93,3 +82,5 @@ layui.use(['layer', 'form','element','jquery','dialog'], function(){
 	  }
 	});*/
 });
+
+
