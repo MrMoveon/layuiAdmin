@@ -1,4 +1,5 @@
 @import 'css3.less';
+@import "var.less";
 //浮动
 .f-l{float:left}
 .f-r{float:right}
@@ -48,7 +49,49 @@
     border-radius: 2px;
     background-color: #fff;
 }
+//引用区域的文字颜色
+.layui-elem-quote{
+    border-left: 5px solid @blue;
+}
 /*清楚浮动*/
 .clearfix{
     .clearfix();
+}
+//灰色背景
+.gray-bg{
+    background: #f5f5f5;
+}
+.layui-nav-no-bg{
+    background: transparent;
+    width: auto;
+    &.layui-nav-tree .layui-nav-item a:hover {
+        background-color: transparent;
+        color: @blue;
+    }
+    &.layui-nav .layui-nav-item a{
+        color: #333;
+    }
+    .layui-nav-itemed>a, .layui-nav-tree .layui-nav-title a, .layui-nav-tree .layui-nav-title a:hover{
+        background: transparent!important;
+        color: #333!important;
+    }
+    &.layui-nav-tree .layui-nav-child a {
+        height: 40px;
+        line-height: 40px;
+        text-indent: 10px;
+        color: #666;
+    }
+    &.layui-nav-tree .layui-nav-child dd.layui-this, &.layui-nav-tree .layui-this,  &.layui-nav-tree .layui-this>a:hover{
+        background-color: #fff;
+        color: @blue;
+    }
+    &.layui-nav-tree .layui-this>a{
+        background-color: #fff;
+        color: @blue;
+        margin-right: -30px;
+    }
+    .layui-nav-bar{
+        display: none;
+    }
+    
 }

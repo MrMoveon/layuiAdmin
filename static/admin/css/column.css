@@ -1,0 +1,40 @@
+.column-wrap {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.iframe-h {
+  height: 100%;
+}
+.column-content {
+  padding: 15px;
+  background: #fff;
+}
+@media (max-width: 768px) {
+  .email-wrap .email-content {
+    padding: 0;
+  }
+  .email-write {
+    padding: 15px;
+  }
+  .email-write .layui-btn {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+  .email-tool-btn .email-tool-btn-right {
+    text-align: left;
+  }
+  .email-tool-btn-left,
+  .email-tool-btn-right {
+    padding-bottom: 10px;
+  }
+  .email-tool-btn-left .layui-inline,
+  .email-tool-btn-right .layui-inline {
+    padding-bottom: 10px;
+  }
+}

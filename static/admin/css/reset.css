@@ -1,0 +1,113 @@
+/*圆角*/
+/*阴影*/
+/*字体*/
+/*动画属性*/
+/*清楚浮动*/
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts//iconfont.eot');
+  src: url('../fonts//iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts//iconfont.woff') format('woff'), /* Modern Browsers */ url('../fonts//iconfont.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts//iconfont.svg#svgFontName') format('svg');
+  
+  /* IE9 Compat Modes */
+  /* Legacy iOS */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.panel-default {
+  border-color: #ebeaea;
+}
+.panel-default .panel-header {
+  border-color: transparent;
+  background-color: #fff;
+  color: #555555;
+}
+.panel-header {
+  border-bottom: solid 1px transparent;
+  padding: 8px 15px;
+  font-size: 16px;
+  font-weight: normal;
+}
+.layui-form-select dl dd.layui-this {
+  background: #f2f2f2;
+  color: #333;
+}
+.layui-btn-primary:hover {
+  border-color: #1e9fff;
+  color: #333;
+}
+.layui-tab-bar {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.layui-elem-quote {
+  border-left: 5px solid #1e9fff;
+}
+/*清楚浮动*/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.gray-bg {
+  background: #f5f5f5;
+}
+.layui-nav-no-bg {
+  background: transparent;
+  width: auto;
+}
+.layui-nav-no-bg.layui-nav-tree .layui-nav-item a:hover {
+  background-color: transparent;
+  color: #1e9fff;
+}
+.layui-nav-no-bg.layui-nav .layui-nav-item a {
+  color: #333;
+}
+.layui-nav-no-bg .layui-nav-itemed > a,
+.layui-nav-no-bg .layui-nav-tree .layui-nav-title a,
+.layui-nav-no-bg .layui-nav-tree .layui-nav-title a:hover {
+  background: transparent!important;
+  color: #333!important;
+}
+.layui-nav-no-bg.layui-nav-tree .layui-nav-child a {
+  height: 40px;
+  line-height: 40px;
+  text-indent: 10px;
+  color: #666;
+}
+.layui-nav-no-bg.layui-nav-tree .layui-nav-child dd.layui-this,
+.layui-nav-no-bg.layui-nav-tree .layui-this,
+.layui-nav-no-bg.layui-nav-tree .layui-this > a:hover {
+  background-color: #fff;
+  color: #1e9fff;
+}
+.layui-nav-no-bg.layui-nav-tree .layui-this > a {
+  background-color: #fff;
+  color: #1e9fff;
+  margin-right: -30px;
+}
+.layui-nav-no-bg .layui-nav-bar {
+  display: none;
+}

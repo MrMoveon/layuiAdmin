@@ -1,0 +1,154 @@
+.email-wrap {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+  background: #f5f5f5;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.email-wrap .email-write-btn {
+  width: 100%;
+}
+.email-wrap .email-folder {
+  padding-top: 20px;
+}
+.email-wrap .email-folder dt {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  line-height: 32px;
+}
+.email-wrap .email-folder dd {
+  font-size: 12px;
+  color: #545454;
+  line-height: 32px;
+  border-bottom: 1px solid #eee;
+}
+.email-wrap .email-folder dd button {
+  margin-top: 4px;
+}
+.email-wrap .email-folder dd .iconfont,
+.email-wrap .email-folder dd .layui-icon {
+  float: left;
+  padding-right: 10px;
+  font-size: 16px;
+}
+.email-wrap .email-classify {
+  padding-top: 20px;
+}
+.email-wrap .email-classify dt {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  line-height: 32px;
+}
+.email-wrap .email-classify dd {
+  font-size: 12px;
+  color: #545454;
+  line-height: 32px;
+}
+.email-wrap .email-classify dd .iconfont,
+.email-wrap .email-classify dd .layui-icon {
+  float: left;
+  padding-right: 10px;
+  font-size: 14px;
+}
+.email-wrap .email-classify dd .icon-blue {
+  color: #01AAED;
+}
+.email-wrap .email-classify dd .icon-green {
+  color: #009688;
+}
+.email-wrap .email-classify dd .icon-wran {
+  color: #F7B824;
+}
+.email-wrap .email-classify dd .icon-red {
+  color: #FF5722;
+}
+.email-wrap .email-classify dd .icon-gray {
+  color: #2F4056;
+}
+.email-wrap .email-label {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.email-wrap .email-label dt {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  line-height: 32px;
+}
+.email-wrap .email-label .layui-btn {
+  margin-bottom: 10px;
+}
+.email-wrap .email-label .layui-btn + .layui-btn {
+  margin-left: 0;
+  margin-right: 0;
+}
+.email-wrap .email-content {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding: 15px;
+  overflow: hidden;
+}
+.iframe-h {
+  height: 100%;
+}
+.email-write {
+  padding: 15px;
+}
+.email-write .layui-btn {
+  margin-bottom: 10px;
+}
+.email-content-title {
+  padding: 15px;
+}
+.email-content-title .write-title {
+  font-size: 20px;
+}
+.email-tool-btn {
+  margin-top: 3px;
+}
+.email-tool-btn .layui-form-item {
+  margin: 0;
+}
+.email-tool-btn .layui-form-item .layui-inline {
+  margin-bottom: 0;
+}
+.email-tool-btn .email-tool-btn-right {
+  text-align: right;
+}
+.email-list {
+  padding: 0 15px;
+}
+@media (max-width: 768px) {
+  .email-wrap .email-content {
+    padding: 0;
+  }
+  .email-write {
+    padding: 15px;
+  }
+  .email-write .layui-btn {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+  .email-tool-btn .email-tool-btn-right {
+    text-align: left;
+  }
+  .email-tool-btn-left,
+  .email-tool-btn-right {
+    padding-bottom: 10px;
+  }
+  .email-tool-btn-left .layui-inline,
+  .email-tool-btn-right .layui-inline {
+    padding-bottom: 10px;
+  }
+}
