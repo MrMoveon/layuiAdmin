@@ -1,0 +1,94 @@
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    background: url("../images/login/login_line.jpg") left center repeat-x;
+    height: 100%;
+}
+/*移除表单填充色*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #ececec inset;
+}
+/*按钮移上去颜色*/
+.layui-btn-primary:hover {
+    border-color: #1E9FFF;
+    color: #333;
+}
+/*页面背景色*/
+.m-login-bg {
+    background: url("../images/login/login_bg.png") left center repeat-x;
+    height: 100%;
+}
+
+.m-login {
+    width: 390px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -195px;
+    margin-top: -205px;
+    h3 {
+        color: #fff;
+        text-align: center;
+        height: 60px;
+        font-size: 28px;
+    }
+    .copyright {
+        text-align: center;
+        color: #999;
+        padding-top: 10px;
+    }
+}
+
+.m-login-warp {
+    background: #fff;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding: 25px;
+    .layui-input {
+        height: 40px;
+        line-height: 40px\9;
+        margin-bottom: 5px;
+        -webkit-transition-property: none;
+        transition-property: none;
+        background: #ececec;
+        border: 1px solid #ececec;
+    }
+    .m-login-btn {
+        .layui-inline {
+            width: 49%;
+            margin: 0;
+            button {
+                width: 100%;
+            }
+        }
+    }
+    .verifyImg {
+        width: 130px;
+        height: 42px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .m-login {
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -150px;
+        margin-top: -240px;
+    }
+    .layui-form-item .layui-inline {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+        clear: both;
+    }
+    .m-login-warp .m-login-btn .layui-inline {
+        width: 100%;
+        margin: 0 0 10px;
+    }
+}

@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Sat Mar 18 21:40:11 2017
+Created by FontForge 20120731 at Fri Mar 24 14:37:02 2017
  By admin
 </metadata>
 <defs>
@@ -19,7 +19,7 @@ Created by FontForge 20120731 at Sat Mar 18 21:40:11 2017
     bbox="-1.14286 -212 1024 896"
     underline-thickness="0"
     underline-position="0"
-    unicode-range="U+0078-E639"
+    unicode-range="U+0078-E656"
   />
 <missing-glyph 
  />
@@ -103,5 +103,8 @@ d="M895 469l-125 148q-46 57 -87 57h-342q-38 0 -87 -57l-125 -148q-21 -28 -21 -99v
 v-23q0 -39 -27.5 -66t-65.5 -27t-65.5 27t-27.5 66v23q0 9 -7 16t-16 7h-218q-14 0 -6 10zM869 164q0 -10 -6.5 -16.5t-16.5 -6.5h-668q-10 0 -16.5 6.5t-6.5 16.5v206q0 10 6.5 17t16.5 7h194q0 -58 41 -99t99 -41t99 41t41 99h194q10 0 16.5 -7t6.5 -17v-206z" />
     <glyph glyph-name="xiajiang" unicode="&#xe60f;" 
 d="M512 96l224 288h-149v288h-149l-1 -288h-149z" />
+    <glyph glyph-name="paixu" unicode="&#xe656;" 
+d="M363.5 3q-8.5 0 -14.5 6t-6 15v679l-201 -170q-6 -5 -14.5 -4.5t-14 7t-5 15t7.5 13.5l234 198q6 5 14 5t14 -6t6 -14v-723q0 -9 -6 -15t-14.5 -6zM673 4l234 198q7 5 7.5 13.5t-5 15t-14 7.5t-14.5 -5l-201 -169v679q0 8 -6 14t-14.5 6t-14.5 -6t-6 -14v-724q0 -8 6 -14
+t14 -6t14 5z" />
   </font>
 </defs></svg>

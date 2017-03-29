@@ -16,7 +16,7 @@
 .main-layout-side {
     width: 200px;
     height: 100%;
-    background: #444c63;
+    background: @sideColor;
     position: absolute;
     left: 0;
     top: 0;
@@ -30,7 +30,7 @@
         background: #00b5f9 url(../images/logo.png) center center no-repeat;
     }
     .layui-nav{
-        background: #444c63;
+        background: @sideColor;
         .iconfont{
             padding-right: 10px;
             font-size: 18px;
@@ -40,7 +40,7 @@
         }
     }
     .layui-nav-itemed>a{
-        background: #444c63!important;
+        background: @sideColor!important;
     }
     .layui-nav-tree .layui-nav-child a {
         height: 40px;
@@ -61,7 +61,7 @@
         }
     }
     .layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-this{
-        background-color: #444c63;
+        background-color: @sideColor;
     }
     .layui-nav-tree .layui-nav-child .layui-this>a{
             background-color: rgba(0, 181, 249, 0.8);
@@ -105,7 +105,7 @@
         text-align: center;
         .iconfont {
             font-size: 20px;
-            color: #444c63;
+            color: @sideColor;
         }
     }
     .layui-nav{
@@ -141,7 +141,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    top: 60px;
+    top: 61px;
     overflow: hidden;
 }
 //tab
@@ -149,6 +149,8 @@
     margin-top: 0;
     .layui-tab-title{
         border-bottom: 1px solid #f0f0f0;
+        z-index: 98;
+        background: #fff;
     }    
     &.layui-tab-brief>.layui-tab-title .layui-this{
         color: #00b5f9;
@@ -171,6 +173,7 @@
         bottom: 0;
         top: 41px;
         padding: 0;
+        z-index: 97;
         .layui-tab-item{
             width: 100%;
             height: 100%;
@@ -188,4 +191,39 @@
 }
 .iframe{
     border:0;
+}
+.main-mask{
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+}
+@media (max-width: 768px) {
+    .main-layout-side{
+        position: fixed;
+        left: -200px;
+        overflow: auto;
+        overflow-x: hidden;
+        z-index: 100;
+    }
+    .main-layout-container{
+        position: absolute;
+        left:0px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .main-layout.hide-side {
+        .main-layout-side{
+            left: 0;
+        }
+        .main-mask{
+            display: block;
+        }
+    }
+    ::-webkit-scrollbar{width:2px;height:10px}
 }

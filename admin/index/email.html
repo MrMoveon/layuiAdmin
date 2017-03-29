@@ -11,7 +11,7 @@
 	</head>
 	<body  class="iframe-h">
 	<div class="wrap-container email-wrap clearfix">
-		<div class="row iframe-h">
+		<div class="row ">
 			<div class="email-edge col-lg-2">
 				<button class="layui-btn layui-btn-normal email-write-btn" id="write-email-btn">写信</button>
 				<dl class="email-folder">
@@ -60,32 +60,173 @@
 					
 				</dl>
 			</div>
-			<div class="col-lg-10 iframe-h">
-				<div class="email-content iframe-h">
-					<iframe src="email-list.html" width="100%" height="100%" id="iframeEmail" name="iframeEmail" scrolling="auto" class="iframe" framborder="0"></iframe>
+			<div class="col-lg-10">
+				<div class="email-content">
+					<div class="email-content-title layui-form">
+						<span class="write-title">收件箱 (16)</span>
+					</div>
+					<div class="email-tool-btn clearfix">
+						<div class="col-lg-6 email-tool-btn-left">
+							<button class="layui-btn layui-btn-small layui-btn-primary" id='email-refresh-btn' data-title='刷新'>
+							  <i class="layui-icon">&#x1002;</i>
+							</button>
+							<button class="layui-btn layui-btn-small layui-btn-primary" id="email-read-btn" data-title='已读'>
+							  <i class="layui-icon">&#x1002;</i>
+							</button>
+							<button class="layui-btn layui-btn-small layui-btn-primary" id='email-important-btn' data-title='重要'>
+							  <i class="layui-icon">&#xe600;</i>
+							</button>
+							<button class="layui-btn layui-btn-small layui-btn-primary" id='email-del-btn' data-title='删除'>
+							  <i class="layui-icon">&#xe640;</i>
+							</button>
+						</div>
+						<div class="col-lg-6 email-tool-btn-right">
+							<div class="layui-form-item">
+								<div class="layui-inline">
+									<input type="text" name="title" required lay-verify="required" placeholder="搜索邮件标题" autocomplete="off" class="layui-input">
+								</div>
+								<div class="layui-inline">
+									<button class="layui-btn layui-btn-normal search-btn">搜索</button>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="layui-form email-list">
+						<table class="layui-table" lay-even lay-skin="nob">
+							<colgroup>
+								<col width="50">
+								<col width="200">
+								<col>
+								<col class="hidden-xs" width="150">
+							</colgroup>
+							<thead>
+								<tr>
+									<th><input type="checkbox" name="" lay-skin="primary" lay-filter="emailAllChoose"></th>
+									<th class="hidden-xs">来源</th>
+									<th>名称</th>
+									<th class="hidden-xs">创建时间</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input type="checkbox" name="" lay-skin="primary"></td>
+									<td class="hidden-xs">淘宝网</td>
+									<td><a href="javascript:;">史上最全！淘宝双11红包疯抢攻略！</a></td>
+									<td class="hidden-xs">1989-10-14</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" lay-skin="primary"></td>
+									<td class="hidden-xs">淘宝网</td>
+									<td>亲，双11来啦！帮你挑货，还送你4999元红包！仅此一次！</td>
+									<td class="hidden-xs">1989-10-14</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" lay-skin="primary"></td>
+									<td class="hidden-xs">Amaze UI</td>
+									<td>Amaze UI Beta2 发布</td>
+									<td class="hidden-xs">1989-10-14</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" lay-skin="primary"></td>
+									<td class="hidden-xs">玩具</td>
+									<td>历史邮件</td>
+									<td class="hidden-xs">1989-10-14</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" lay-skin="primary"></td>
+									<td class="hidden-xs">玩具</td>
+									<td>历史邮件</td>
+									<td class="hidden-xs">1989-10-14</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" lay-skin="primary"></td>
+									<td class="hidden-xs">玩具</td>
+									<td>历史邮件</td>
+									<td class="hidden-xs">1989-10-14</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" lay-skin="primary"></td>
+									<td class="hidden-xs">玩具</td>
+									<td>历史邮件</td>
+									<td class="hidden-xs">1989-10-14</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" lay-skin="primary"></td>
+									<td class="hidden-xs">玩具</td>
+									<td>历史邮件</td>
+									<td class="hidden-xs">1989-10-14</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" lay-skin="primary"></td>
+									<td class="hidden-xs">玩具</td>
+									<td>历史邮件</td>
+									<td class="hidden-xs">1989-10-14</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="" lay-skin="primary"></td>
+									<td class="hidden-xs">玩具</td>
+									<td>历史邮件</td>
+									<td class="hidden-xs">1989-10-14</td>
+								</tr>
+							</tbody>
+						</table>
+						<div id="email-page" style="text-align: center;"></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 	<script>
-		layui.use(['jquery'],function(){
-			var $=layui.jquery;
-			//默认加载email列表
-			//load.page('email-list.html','.email-content');
-			//写信
-			
-			$('#write-email-btn').on('click',function(){
-				$('#iframeEmail').attr('src','email-write.html');
-			})
-			//列表
-			$('.email-folder').on('click','a',function(){
-				var url=$(this).attr('data-url');
-				$('#iframeEmail').attr('src',url);
+		layui.use(['form', 'laypage', 'jquery','layer'], function() {
+				var form = layui.form(),
+					layer = layui.layer,
+					laypage = layui.laypage,
+					$ = layui.jquery;
+				//获取当前iframe的name值
+				var iframeObj = $(window.frameElement).attr('name');	
 				
-			})
-		})
+				$('#write-email-btn').on('click',function(){
+					parent.page("写邮件", 'email-write.html', iframeObj, w = "700px", h = "600px");
+				})
+				//列表
+				$('.email-folder').on('click','a',function(){
+					var url=$(this).attr('data-url');
+					$('#iframeEmail').attr('src',url);
+					
+				})	
+				$('.email-tool-btn .f-l').on('mouseenter','button',function(){
+					var title=$(this).attr('data-title');
+					var id='#'+$(this).attr('id');
+					layer.tips(title, id, {
+						tips: [1, '#444c63'], 
+						time: 1000
+					});
+				})
+				//分页
+				laypage({
+				    cont: 'email-page'
+				    ,pages: 10
+				    ,skin: '#1E9FFF'
+				  });
+				form.on('checkbox(emailAllChoose)', function(data) {
+					var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]');
+					child.each(function(index, item) {
+						item.checked = data.elem.checked;
+					});
+					form.render('checkbox');
+				});
 		
+				form.render();
+				//非手机端，设置高度
+				if(window.innerWidth>=768){
+					$('.email-content').css('height',window.innerHeight-30);
+				}
+				$(window).resize(function(){
+					$('.email-content').css('height',window.innerHeight-30);
+				})
+			});
 	</script>
 </body>
 </html>

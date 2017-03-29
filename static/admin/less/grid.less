@@ -1,10 +1,20 @@
-.container-fluid{ width:100%}
+/*2.1 栅格系统
+    Name:           style_span
+    Example:
+    <div class="responsive">
+    <div class="row cl" role="grid">
+      <div class="col-1">……</div>
+      ……
+    </div>
+    </div>
+    Explain:        栅格系统
+*/
+/*2.1 响应式栅格系统*/
 .container {padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto}
-@media ( min-width : 768px) {
-    .container {width: 750px}
-}
+.container-fluid {padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto}
+
 @media ( min-width : 992px) {
-    .container {width: 970px}
+    .container{width: 960px}
 }
 @media ( min-width : 1200px) {
     .container {width: 1170px}
@@ -12,19 +22,81 @@
 @media ( min-width : 1300px) {
     .container {width: 1270px}
 }
-@media ( min-width : 1400px) {
-    .container {width: 95%}
-}
+
 @media print{
     .container{width:auto}
 }
 .row.cl{}
 .row{box-sizing:border-box; margin-left:-15px; margin-right:-15px}
-.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {min-height: 1px;position: relative; padding-left:15px; padding-right:15px; box-sizing:border-box;
-    -webkit-transition:all 0.3s ease-in;
-    -moz-transition:all 0.3s ease-in;
-    -o-transition:all 0.3s ease-in;
-    transition:all 0.3s ease-in}
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {min-height: 1px;position: relative; padding-left:15px; padding-right:15px; box-sizing:border-box;-webkit-transition:all 0.3s ease-in;
+        -moz-transition:all 0.3s ease-in;
+        -o-transition:all 0.3s ease-in;
+            transition:all 0.3s ease-in}
+
+.col-1{width:8.33333%}
+.col-2{width:16.66667%}
+.col-3{width:25%}
+.col-4{width:33.33333%}
+.col-5{width:41.66667%}
+.col-6{width:50%}
+.col-7{width:58.33333%}
+.col-8{width:66.66667%}
+.col-9{width:75%}
+.col-10{width:83.33333%}
+.col-11{width:91.66667%}
+.col-12{width:100%}
+
+.col-offset-0{margin-left:0}
+.col-offset-1{margin-left:8.33333%}
+.col-offset-2{margin-left:16.66667%}
+.col-offset-3{margin-left:25%}
+.col-offset-4{margin-left:33.33333%}
+.col-offset-5{margin-left:41.66667%}
+.col-offset-6{margin-left:50%}
+.col-offset-7{margin-left:58.33333%}
+.col-offset-8{margin-left:66.66667%}
+.col-offset-9{margin-left:75%}
+.col-offset-10{margin-left:83.33333%}
+.col-offset-11{margin-left:91.66667%}
+
+.col-push-0{position:relative;left:0;right:auto}
+.col-pull-0{right:0;left:auto}
+.col-push-1{left:8.33333%;right:auto}
+.col-pull-1{right:8.33333%;left:auto}
+.col-push-2{left:16.66667%;right:auto}
+.col-pull-2{right:16.66667%;left:auto}
+.col-push-3{left:25%;right:auto}
+.col-pull-3{right:25%;left:auto}
+.col-push-4{left:33.33333%;right:auto}
+.col-pull-4{right:33.33333%;left:auto}
+.col-push-5{left:41.66667%;right:auto}
+.col-pull-5{right:41.66667%;left:auto}
+.col-push-6{left:50%;right:auto}
+.col-pull-6{right:50%;left:auto}
+.col-push-7{left:58.33333%;right:auto}
+.col-pull-7{right:58.33333%;left:auto}
+.col-push-8{left:66.66667%;right:auto}
+.col-pull-8{right:66.66667%;left:auto}
+.col-push-9{left:75%;right:auto}
+.col-pull-9{right:75%;left:auto}
+.col-push-10{left:83.33333%;right:auto}
+.col-pull-10{right:83.33333%;left:auto}
+.col-push-11{left:91.66667%;right:auto}
+.col-pull-11{right:91.66667%;left:auto}
+/*局部模块平分*/
+.col-1-1{ width:100%}
+.col-2-1{ width:50%}
+.col-3-1{ width:33.333333%}
+.col-3-2{ width:66.666667%}
+.col-4-1{ width:25%}
+.col-4-3{ width:75%}
+.col-5-1{ width:20%}
+.col-5-2{ width:40%}
+.col-5-3{ width:60%}
+.col-5-4{ width:80%}
+.col-6-1{ width:16.666667%}
+.col-6-5{ width:83.333333%}
+
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {float: left}
 .col-xs-12 {width: 100%}
 .col-xs-11 {width: 91.66666667%}
@@ -77,6 +149,10 @@
 .col-xs-offset-2 {margin-left: 16.66666667%}
 .col-xs-offset-1 {margin-left: 8.33333333%}
 .col-xs-offset-0 {margin-left: 0}
+@media (max-width:767px){
+    .responsive [class^="col-"],.responsive [class*=" col-"]{float:none!important;width:auto!important}
+    .responsive [class^="col-offset-"],.responsive [class*=" col-offset-"]{ margin-left:0px!important}
+}
 @media(min-width:768px){
     .col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9{float:left}
     .col-sm-12{width:100%}
@@ -238,4 +314,81 @@
     .col-lg-offset-2{margin-left:16.666666666666664%}
     .col-lg-offset-1{margin-left:8.333333333333332%}
     .col-lg-offset-0{margin-left:0}
-}           
+}
+/*2.2 响应式隐藏显示
+    Name:           style_Layout
+    Explain:        左右两栏|左中右三栏|上中下
+    Last Modify:    guojunhui
+*/
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg,
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block {
+  display: none !important}
+@media ( max-width : 767px) {
+    .visible-xs {display: block !important}
+    table.visible-xs {display: table}
+    tr.visible-xs {display: table-row !important}
+    th.visible-xs,td.visible-xs {display: table-cell !important}
+    .hidden-xs {display: none !important}
+    .visible-xs-block {display: block !important}
+    .visible-xs-inline {display: inline !important}
+    .visible-xs-inline-block {display: inline-block !important}
+}
+@media ( min-width : 768px) and (max-width: 991px) {
+    .visible-sm {display: block !important}
+    table.visible-sm {display: table}
+    tr.visible-sm {display: table-row !important}
+    th.visible-sm,td.visible-sm {display: table-cell !important}
+    .hidden-sm {display: none !important}
+    .visible-sm-block {display: block !important}
+    .visible-sm-inline {display: inline !important}
+    .visible-sm-inline-block {display: inline-block !important}
+}
+@media ( min-width : 992px) and (max-width: 1199px) {
+    .visible-md {display: block !important}
+    table.visible-md {display: table}
+    tr.visible-md {display: table-row !important}
+    th.visible-md,td.visible-md {display: table-cell !important}
+    .hidden-md {display: none !important}
+    .visible-md-block {display: block !important}
+    .visible-md-inline {display: inline !important}
+    .visible-md-inline-block {display: inline-block !important}
+}
+@media ( min-width : 1200px) {
+    .visible-lg {display: block !important}
+    table.visible-lg {display: table}
+    tr.visible-lg {display: table-row !important}
+    th.visible-lg,td.visible-lg {display: table-cell !important}
+    .hidden-lg {display: none !important}
+    .visible-lg-block {display: block !important}
+    .visible-lg-inline {display: inline !important}
+    .visible-lg-inline-block {display: inline-block !important}
+}
+
+.visible-print {display: none !important}
+.visible-print-block {display: none !important}
+.visible-print-inline {display: none !important}
+.visible-print-inline-block {display: none !important}
+@media print {
+    .visible-print {display: block !important}
+    table.visible-print {display: table}
+    tr.visible-print {display: table-row !important}
+    th.visible-print,td.visible-print {display: table-cell !important}
+    .visible-print-block {display: block !important}
+    .visible-print-inline {display: inline !important}
+    .visible-print-inline-block {display: inline-block !important}
+    .hidden-print {display: none !important}
+}

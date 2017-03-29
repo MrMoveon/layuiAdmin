@@ -1,4 +1,4 @@
-.email-wrap{
+.email-wrap {
     .box-sizing(border-box);
     height: 100%;
     width: 100%;
@@ -6,85 +6,87 @@
     background: #f5f5f5;
     overflow-x: hidden;
     overflow-y: auto;
-    .email-write-btn{
+    .email-write-btn {
         width: 100%;
     }
-    .email-folder{
+    .email-folder {
         padding-top: 20px;
-        dt{
+        dt {
             font-size: 14px;
             font-weight: bold;
             color: #333;
             line-height: 32px;
         }
-        dd{
+        dd {
             font-size: 12px;
             color: #545454;
             line-height: 32px;
             border-bottom: 1px solid #eee;
-            button{
+            button {
                 margin-top: 4px;
             }
-            .iconfont,.layui-icon{
+            .iconfont,
+            .layui-icon {
                 float: left;
                 padding-right: 10px;
                 font-size: 16px;
             }
         }
     }
-    .email-classify{
+    .email-classify {
         padding-top: 20px;
-         dt{
+        dt {
             font-size: 14px;
             font-weight: bold;
             color: #333;
             line-height: 32px;
         }
-        dd{
+        dd {
             font-size: 12px;
             color: #545454;
             line-height: 32px;
-             .iconfont,.layui-icon{
+            .iconfont,
+            .layui-icon {
                 float: left;
                 padding-right: 10px;
                 font-size: 14px;
             }
-            .icon-blue{
+            .icon-blue {
                 color: #01AAED;
             }
-            .icon-green{
+            .icon-green {
                 color: #009688;
             }
-            .icon-wran{
-                color:#F7B824;
+            .icon-wran {
+                color: #F7B824;
             }
-            .icon-red{
+            .icon-red {
                 color: #FF5722;
             }
-            .icon-gray{
-                color:#2F4056;
+            .icon-gray {
+                color: #2F4056;
             }
         }
     }
-    .email-label{
-         padding-top: 20px;
-         padding-bottom: 20px;
-         dt{
+    .email-label {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        dt {
             font-size: 14px;
             font-weight: bold;
             color: #333;
             line-height: 32px;
         }
-        .layui-btn{
+        .layui-btn {
             margin-bottom: 10px;
         }
         .layui-btn+.layui-btn {
-            margin-left:0px;
-            margin-right:0px;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
-    .email-content{
-         .box-sizing(border-box);
+    .email-content {
+        .box-sizing(border-box);
         background: #fff;
         height: 100%;
         width: 100%;
@@ -92,28 +94,64 @@
         padding: 15px;
         overflow: hidden;
     }
-    
+
 }
-.iframe-h{
+.iframe-h {
     height: 100%;
 }
-.email-content-title{
-        padding:15px 15px 15px;
-        .write-title{
-            font-size: 20px;
+.email-write {
+    padding: 15px;
+    .layui-btn {
+        margin-bottom: 10px;
+    }
+}
+
+.email-content-title {
+    padding: 15px;
+    .write-title {
+        font-size: 20px;
+    }
+}
+.email-tool-btn {
+    margin-top: 3px;
+    .layui-form-item {
+        margin: 0;
+        .layui-inline {
+            margin-bottom: 0;
         }
     }
-    .email-tool-btn{
-        margin-top: 3px;
-        padding: 0 15px;
-       .layui-form-item{
-           margin: 0;
-           .layui-inline{
-               margin-bottom: 0;
-           }
-       }
+    .email-tool-btn-right {
+        text-align: right;
     }
-    .email-list{
-       
-        padding: 0 15px;
+}
+.email-list {
+    padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .email-wrap {
+        .email-content {
+            padding: 0;
+        }
     }
+    .email-write {
+        padding: 15px;
+        .layui-btn {
+            width: 100%;
+            margin: 0 0 10px;
+
+        }
+    }
+    .email-tool-btn {
+        .email-tool-btn-right {
+            text-align: left;
+        }
+    }
+    .email-tool-btn-left,
+    .email-tool-btn-right {
+        padding-bottom: 10px;
+        .layui-inline {
+            padding-bottom: 10px;
+        }
+    }
+}

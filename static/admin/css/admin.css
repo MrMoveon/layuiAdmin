@@ -3,23 +3,33 @@
 /*字体*/
 /*动画属性*/
 /*清楚浮动*/
-.container-fluid {
-  width: 100%;
-}
+/*2.1 栅格系统
+    Name:           style_span
+    Example:
+    <div class="responsive">
+    <div class="row cl" role="grid">
+      <div class="col-1">……</div>
+      ……
+    </div>
+    </div>
+    Explain:        栅格系统
+*/
+/*2.1 响应式栅格系统*/
 .container {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 960px;
   }
 }
 @media (min-width: 1200px) {
@@ -30,11 +40,6 @@
 @media (min-width: 1300px) {
   .container {
     width: 1270px;
-  }
-}
-@media (min-width: 1400px) {
-  .container {
-    width: 95%;
   }
 }
 @media print {
@@ -116,6 +121,212 @@
   -moz-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+.col-1 {
+  width: 8.33333%;
+}
+.col-2 {
+  width: 16.66667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33333%;
+}
+.col-5 {
+  width: 41.66667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33333%;
+}
+.col-8 {
+  width: 66.66667%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33333%;
+}
+.col-11 {
+  width: 91.66667%;
+}
+.col-12 {
+  width: 100%;
+}
+.col-offset-0 {
+  margin-left: 0;
+}
+.col-offset-1 {
+  margin-left: 8.33333%;
+}
+.col-offset-2 {
+  margin-left: 16.66667%;
+}
+.col-offset-3 {
+  margin-left: 25%;
+}
+.col-offset-4 {
+  margin-left: 33.33333%;
+}
+.col-offset-5 {
+  margin-left: 41.66667%;
+}
+.col-offset-6 {
+  margin-left: 50%;
+}
+.col-offset-7 {
+  margin-left: 58.33333%;
+}
+.col-offset-8 {
+  margin-left: 66.66667%;
+}
+.col-offset-9 {
+  margin-left: 75%;
+}
+.col-offset-10 {
+  margin-left: 83.33333%;
+}
+.col-offset-11 {
+  margin-left: 91.66667%;
+}
+.col-push-0 {
+  position: relative;
+  left: 0;
+  right: auto;
+}
+.col-pull-0 {
+  right: 0;
+  left: auto;
+}
+.col-push-1 {
+  left: 8.33333%;
+  right: auto;
+}
+.col-pull-1 {
+  right: 8.33333%;
+  left: auto;
+}
+.col-push-2 {
+  left: 16.66667%;
+  right: auto;
+}
+.col-pull-2 {
+  right: 16.66667%;
+  left: auto;
+}
+.col-push-3 {
+  left: 25%;
+  right: auto;
+}
+.col-pull-3 {
+  right: 25%;
+  left: auto;
+}
+.col-push-4 {
+  left: 33.33333%;
+  right: auto;
+}
+.col-pull-4 {
+  right: 33.33333%;
+  left: auto;
+}
+.col-push-5 {
+  left: 41.66667%;
+  right: auto;
+}
+.col-pull-5 {
+  right: 41.66667%;
+  left: auto;
+}
+.col-push-6 {
+  left: 50%;
+  right: auto;
+}
+.col-pull-6 {
+  right: 50%;
+  left: auto;
+}
+.col-push-7 {
+  left: 58.33333%;
+  right: auto;
+}
+.col-pull-7 {
+  right: 58.33333%;
+  left: auto;
+}
+.col-push-8 {
+  left: 66.66667%;
+  right: auto;
+}
+.col-pull-8 {
+  right: 66.66667%;
+  left: auto;
+}
+.col-push-9 {
+  left: 75%;
+  right: auto;
+}
+.col-pull-9 {
+  right: 75%;
+  left: auto;
+}
+.col-push-10 {
+  left: 83.33333%;
+  right: auto;
+}
+.col-pull-10 {
+  right: 83.33333%;
+  left: auto;
+}
+.col-push-11 {
+  left: 91.66667%;
+  right: auto;
+}
+.col-pull-11 {
+  right: 91.66667%;
+  left: auto;
+}
+/*局部模块平分*/
+.col-1-1 {
+  width: 100%;
+}
+.col-2-1 {
+  width: 50%;
+}
+.col-3-1 {
+  width: 33.333333%;
+}
+.col-3-2 {
+  width: 66.666667%;
+}
+.col-4-1 {
+  width: 25%;
+}
+.col-4-3 {
+  width: 75%;
+}
+.col-5-1 {
+  width: 20%;
+}
+.col-5-2 {
+  width: 40%;
+}
+.col-5-3 {
+  width: 60%;
+}
+.col-5-4 {
+  width: 80%;
+}
+.col-6-1 {
+  width: 16.666667%;
+}
+.col-6-5 {
+  width: 83.333333%;
 }
 .col-xs-1,
 .col-xs-2,
@@ -283,6 +494,17 @@
 }
 .col-xs-offset-0 {
   margin-left: 0;
+}
+@media (max-width: 767px) {
+  .responsive [class^="col-"],
+  .responsive [class*=" col-"] {
+    float: none!important;
+    width: auto !important;
+  }
+  .responsive [class^="col-offset-"],
+  .responsive [class*=" col-offset-"] {
+    margin-left: 0px !important;
+  }
 }
 @media (min-width: 768px) {
   .col-sm-1,
@@ -791,6 +1013,176 @@
     margin-left: 0;
   }
 }
+/*2.2 响应式隐藏显示
+    Name:           style_Layout
+    Explain:        左右两栏|左中右三栏|上中下
+    Last Modify:    guojunhui
+*/
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg,
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .visible-xs {
+    display: block !important;
+  }
+  table.visible-xs {
+    display: table;
+  }
+  tr.visible-xs {
+    display: table-row !important;
+  }
+  th.visible-xs,
+  td.visible-xs {
+    display: table-cell !important;
+  }
+  .hidden-xs {
+    display: none !important;
+  }
+  .visible-xs-block {
+    display: block !important;
+  }
+  .visible-xs-inline {
+    display: inline !important;
+  }
+  .visible-xs-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .visible-sm {
+    display: block !important;
+  }
+  table.visible-sm {
+    display: table;
+  }
+  tr.visible-sm {
+    display: table-row !important;
+  }
+  th.visible-sm,
+  td.visible-sm {
+    display: table-cell !important;
+  }
+  .hidden-sm {
+    display: none !important;
+  }
+  .visible-sm-block {
+    display: block !important;
+  }
+  .visible-sm-inline {
+    display: inline !important;
+  }
+  .visible-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md {
+    display: block !important;
+  }
+  table.visible-md {
+    display: table;
+  }
+  tr.visible-md {
+    display: table-row !important;
+  }
+  th.visible-md,
+  td.visible-md {
+    display: table-cell !important;
+  }
+  .hidden-md {
+    display: none !important;
+  }
+  .visible-md-block {
+    display: block !important;
+  }
+  .visible-md-inline {
+    display: inline !important;
+  }
+  .visible-md-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 1200px) {
+  .visible-lg {
+    display: block !important;
+  }
+  table.visible-lg {
+    display: table;
+  }
+  tr.visible-lg {
+    display: table-row !important;
+  }
+  th.visible-lg,
+  td.visible-lg {
+    display: table-cell !important;
+  }
+  .hidden-lg {
+    display: none !important;
+  }
+  .visible-lg-block {
+    display: block !important;
+  }
+  .visible-lg-inline {
+    display: inline !important;
+  }
+  .visible-lg-inline-block {
+    display: inline-block !important;
+  }
+}
+.visible-print {
+  display: none !important;
+}
+.visible-print-block {
+  display: none !important;
+}
+.visible-print-inline {
+  display: none !important;
+}
+.visible-print-inline-block {
+  display: none !important;
+}
+@media print {
+  .visible-print {
+    display: block !important;
+  }
+  table.visible-print {
+    display: table;
+  }
+  tr.visible-print {
+    display: table-row !important;
+  }
+  th.visible-print,
+  td.visible-print {
+    display: table-cell !important;
+  }
+  .visible-print-block {
+    display: block !important;
+  }
+  .visible-print-inline {
+    display: inline !important;
+  }
+  .visible-print-inline-block {
+    display: inline-block !important;
+  }
+  .hidden-print {
+    display: none !important;
+  }
+}
 .panel {
   background-color: #fff;
   border: solid 1px transparent;
@@ -865,6 +1257,71 @@
   border-color: #dd514c;
   background-color: #dd514c;
   color: #ffffff;
+}
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts//iconfont.eot');
+  src: url('../fonts//iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts//iconfont.woff') format('woff'), /* Modern Browsers */ url('../fonts//iconfont.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts//iconfont.svg#svgFontName') format('svg');
+  
+  /* IE9 Compat Modes */
+  /* Legacy iOS */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.panel-default {
+  border-color: #ebeaea;
+}
+.panel-default .panel-header {
+  border-color: transparent;
+  background-color: #fff;
+  color: #555555;
+}
+.panel-header {
+  border-bottom: solid 1px transparent;
+  padding: 8px 15px;
+  font-size: 16px;
+  font-weight: normal;
+}
+.layui-form-select dl dd.layui-this {
+  background: #f2f2f2;
+  color: #333;
+}
+.layui-btn-primary:hover {
+  border-color: #1e9fff;
+  color: #333;
+}
+.layui-tab-bar {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+  background-color: #fff;
+}
+/*清楚浮动*/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
 }
 .commentList .item {
   list-style: none outside none;
@@ -1056,59 +1513,6 @@
 .pagination li.disabled {
   background: #f2f2f2;
 }
-.f-l {
-  float: left;
-}
-.f-r {
-  float: right;
-}
-@font-face {
-  font-family: 'iconfont';
-  src: url('../fonts//iconfont.eot');
-  src: url('../fonts//iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts//iconfont.woff') format('woff'), /* Modern Browsers */ url('../fonts//iconfont.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts//iconfont.svg#svgFontName') format('svg');
-  
-  /* IE9 Compat Modes */
-  /* Legacy iOS */
-}
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
-}
-.panel-default {
-  border-color: #ebeaea;
-}
-.panel-default .panel-header {
-  border-color: transparent;
-  background-color: #fff;
-  color: #555555;
-}
-.panel-header {
-  border-bottom: solid 1px transparent;
-  padding: 8px 15px;
-  font-size: 16px;
-  font-weight: normal;
-}
-.layui-form-select dl dd.layui-this {
-  background: #f2f2f2;
-  color: #333;
-}
-.layui-btn-primary:hover {
-  border-color: #1E9FFF;
-  color: #333;
-}
-/*清楚浮动*/
-.clearfix {
-  zoom: 1;
-}
-.clearfix:after {
-  display: block;
-  content: '';
-  clear: both;
-}
 .main-layout {
   overflow: hidden;
   width: 100%;
@@ -1151,7 +1555,7 @@
   top: 2px;
 }
 .main-layout-side .layui-nav-itemed > a {
-  background: #444c63!important;
+  background: #444c63 !important;
 }
 .main-layout-side .layui-nav-tree .layui-nav-child a {
   height: 40px;
@@ -1254,7 +1658,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  top: 60px;
+  top: 61px;
   overflow: hidden;
 }
 .main-layout-tab {
@@ -1262,6 +1666,8 @@
 }
 .main-layout-tab .layui-tab-title {
   border-bottom: 1px solid #f0f0f0;
+  z-index: 98;
+  background: #fff;
 }
 .main-layout-tab.layui-tab-brief > .layui-tab-title .layui-this {
   color: #00b5f9;
@@ -1282,6 +1688,7 @@
   bottom: 0;
   top: 41px;
   padding: 0;
+  z-index: 97;
 }
 .main-layout-tab .layui-tab-content .layui-tab-item {
   width: 100%;
@@ -1299,6 +1706,42 @@
 }
 .iframe {
   border: 0;
+}
+.main-mask {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+  .main-layout-side {
+    position: fixed;
+    left: -200px;
+    overflow: auto;
+    overflow-x: hidden;
+    z-index: 100;
+  }
+  .main-layout-container {
+    position: absolute;
+    left: 0px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .main-layout.hide-side .main-layout-side {
+    left: 0;
+  }
+  .main-layout.hide-side .main-mask {
+    display: block;
+  }
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 10px;
+  }
 }
 .email-wrap {
   -moz-box-sizing: border-box;
@@ -1387,8 +1830,8 @@
   margin-bottom: 10px;
 }
 .email-wrap .email-label .layui-btn + .layui-btn {
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
 }
 .email-wrap .email-content {
   -moz-box-sizing: border-box;
@@ -1404,15 +1847,20 @@
 .iframe-h {
   height: 100%;
 }
+.email-write {
+  padding: 15px;
+}
+.email-write .layui-btn {
+  margin-bottom: 10px;
+}
 .email-content-title {
-  padding: 15px 15px 15px;
+  padding: 15px;
 }
 .email-content-title .write-title {
   font-size: 20px;
 }
 .email-tool-btn {
   margin-top: 3px;
-  padding: 0 15px;
 }
 .email-tool-btn .layui-form-item {
   margin: 0;
@@ -1420,8 +1868,34 @@
 .email-tool-btn .layui-form-item .layui-inline {
   margin-bottom: 0;
 }
+.email-tool-btn .email-tool-btn-right {
+  text-align: right;
+}
 .email-list {
   padding: 0 15px;
+}
+@media (max-width: 768px) {
+  .email-wrap .email-content {
+    padding: 0;
+  }
+  .email-write {
+    padding: 15px;
+  }
+  .email-write .layui-btn {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+  .email-tool-btn .email-tool-btn-right {
+    text-align: left;
+  }
+  .email-tool-btn-left,
+  .email-tool-btn-right {
+    padding-bottom: 10px;
+  }
+  .email-tool-btn-left .layui-inline,
+  .email-tool-btn-right .layui-inline {
+    padding-bottom: 10px;
+  }
 }
 .welcome-container {
   width: 100%;
