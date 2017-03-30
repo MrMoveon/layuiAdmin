@@ -196,7 +196,7 @@
 				$('.addBtn').click(function() {
 
 					//将iframeObj传递给父级窗口
-					parent.page("生活分类添加", SCOPE.add, iframeObj, w = "700px", h = "330px");
+					parent.parent.page("生活分类添加", SCOPE.add, iframeObj, w = "700px", h = "600px");
 					return false;
 
 				}).mouseenter(function() {
@@ -272,68 +272,6 @@
 					parent.page("生活分类添加", SCOPE.edit + "?id=" + id, iframeObj, w = "700px", h = "330px");
 				})
 			});
-
-			//			layui.use(['form', 'jquery', 'laydate','laypage','dialog'], function() {
-			//				var form = layui.form(),
-			//					layer = layui.layer,
-			//					$ = layui.jquery,
-			//					laypage=layui.laypage,
-			//					laydate = layui.laydate,
-			//					dialog = layui.dialog;
-			//					
-			//				
-			//				//删除
-			//				$('.del-btn').on('click',function(){
-			//					dialog.confirm({
-			//						'message':'确定要删除吗？',
-			//						'success':function(){
-			//							console.log('删除成功');
-			//							layer.closeAll();
-			//							},
-			//						'cancel':function(){}
-			//					});
-			//				})	
-			//				//提示
-			//				$('.addBtn').mouseenter(function(){
-			//					layer.tips('添加', '.addBtn', {
-			//						tips: [1, '#444c63'], //还可配置颜色
-			//						time: 1000
-			//					});
-			//				})
-			//				$('.delBtn').mouseenter(function(e){
-			//					e.preventDefault(); 
-			//					layer.tips('删除', '.delBtn', {
-			//						tips: [1, '#444c63'], //还可配置颜色
-			//						time: 1000
-			//					});
-			//				})	
-			//				$('#list-add-btn').on('click',function(){
-			//					var index=layer.open({
-			//					  type: 2,
-			//					  area: ['700px', '560px'],
-			//					  fixed: false, //不固定
-			//					  content: 'add.html'
-			//					});
-			//					if(window.innerWidth<=768){
-			//						layer.full(index);
-			//					}
-			//				})
-			//				//全选
-			//				form.on('checkbox(allChoose)', function(data) {
-			//					var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]');
-			//					child.each(function(index, item) {
-			//						item.checked = data.elem.checked;
-			//					});
-			//					form.render('checkbox');
-			//				});
-			//				form.render();
-			//				//分页
-			//				laypage({
-			//				    cont: 'page'
-			//				    ,pages: 10
-			//				    ,skin: '#1E9FFF'
-			//				  });
-			//			});
 		</script>
 	</body>
 

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="iframe-h">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>网站后台管理模版</title>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css" />
+	</head>
+
+	<body class="iframe-h gray-bg">
+		<div class="wrap-container column-wrap clearfix">
+			<div class="column-edge">
+				<ul class="layui-nav layui-nav-tree layui-nav-no-bg" lay-filter="column">
+				  <li class="layui-nav-item">
+				    <a href="javascript:;">单页管理</a>
+				    <dl class="layui-nav-child">
+				      <dd><a href="column-danye.html">关于我们</a></dd>
+				      <dd><a href="column-danye.html">联系我们</a></dd>
+				      <dd><a href="column-danye.html">网站地图</a></dd>
+				    </dl>
+				  </li>
+				  <li class="layui-nav-item">
+				    <a href="javascript:;">新闻中心</a>
+				    <dl class="layui-nav-child">
+				      <dd><a href="column-news.html">公司新闻</a></dd>
+				      <dd><a href="column-news.html">行业新闻</a></dd>
+				    </dl>
+				  </li>
+				  <li class="layui-nav-item"><a href="column-news.html">产品</a></li>
+				  <li class="layui-nav-item"><a href="column-news.html">大数据</a></li>
+				</ul>
+  
+			</div>
+			<div class="column-content">
+				<form class="layui-form" action="{:url('category/index')}">
+					<div class="layui-form-item">
+						<div class="layui-inline tool-btn">
+		                    <button class="layui-btn layui-btn-small layui-btn-normal addBtn"><i class="layui-icon">&#xe654;</i></button>
+		                    <button class="layui-btn layui-btn-small layui-btn-danger delBtn"><i class="layui-icon">&#xe640;</i></button>
+		                    <button class="layui-btn layui-btn-small layui-btn-warm listOrderBtn hidden-xs"><i class="iconfont">&#xe656;</i></button>
+		                </div>
+						<div class="layui-inline">
+							<input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+						</div>
+						<div class="layui-inline">
+							<select name="states"  lay-filter="status">
+								<option value="">请选择一个状态</option>
+								<option value="010">正常</option>
+								<option value="021">停止</option>
+								<option value="0571">删除</option>
+							</select>
+						</div>
+						<button class="layui-btn layui-btn-normal" lay-submit="search">搜索</button>
+					</div>
+				</form>
+				<div class="layui-form" id="category-table-list">
+					<table class="layui-table" lay-even lay-skin="nob">
+						<colgroup>
+							<col width="50">
+							<col class="hidden-xs" width="50">
+							<col class="hidden-xs" width="100">
+							<col>
+							<col class="hidden-xs" width="150">
+							<col class="hidden-xs" width="150">
+							<col width="80">
+							<col width="150">
+						</colgroup>
+						<thead>
+							<tr>
+								<th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose"></th>
+								<th class="hidden-xs">ID</th>
+								<th class="hidden-xs">排序</th>
+								<th>名称</th>
+								<th class="hidden-xs">创建时间</th>
+								<th class="hidden-xs">修改时间</th>
+								<th>状态</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" name="" lay-skin="primary"  data-id="1"></td>
+								<td class="hidden-xs">1</td>
+								<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="1"></td>
+								<td>玩具</td>
+								<td class="hidden-xs">1989-10-14</td>
+								<td class="hidden-xs">1989-10-14</td>
+								<td><button class="layui-btn layui-btn-mini layui-btn-normal">正常</button></td>
+								<td>
+									<div class="layui-inline">
+										<button class="layui-btn layui-btn-small layui-btn-normal  edit-btn" data-id="1"><i class="layui-icon">&#xe642;</i></button>
+										<button class="layui-btn layui-btn-small layui-btn-danger del-btn" data-id="1"><i class="layui-icon">&#xe640;</i></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" lay-skin="primary"  data-id="1"></td>
+								<td class="hidden-xs">1</td>
+								<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="1"></td>
+								<td>玩具</td>
+								<td class="hidden-xs">1989-10-14</td>
+								<td class="hidden-xs">1989-10-14</td>
+								<td><button class="layui-btn layui-btn-mini layui-btn-normal">正常</button></td>
+								<td>
+									<div class="layui-inline">
+										<button class="layui-btn layui-btn-small layui-btn-normal  edit-btn" data-id="1"><i class="layui-icon">&#xe642;</i></button>
+										<button class="layui-btn layui-btn-small layui-btn-danger del-btn" data-id="1"><i class="layui-icon">&#xe640;</i></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" lay-skin="primary"  data-id="1"></td>
+								<td class="hidden-xs">1</td>
+								<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="1"></td>
+								<td>玩具</td>
+								<td class="hidden-xs">1989-10-14</td>
+								<td class="hidden-xs">1989-10-14</td>
+								<td><button class="layui-btn layui-btn-mini layui-btn-normal">正常</button></td>
+								<td>
+									<div class="layui-inline">
+										<button class="layui-btn layui-btn-small layui-btn-normal  edit-btn" data-id="1"><i class="layui-icon">&#xe642;</i></button>
+										<button class="layui-btn layui-btn-small layui-btn-danger del-btn" data-id="1"><i class="layui-icon">&#xe640;</i></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" lay-skin="primary"  data-id="1"></td>
+								<td class="hidden-xs">1</td>
+								<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="1"></td>
+								<td>玩具</td>
+								<td class="hidden-xs">1989-10-14</td>
+								<td class="hidden-xs">1989-10-14</td>
+								<td><button class="layui-btn layui-btn-mini layui-btn-normal">正常</button></td>
+								<td>
+									<div class="layui-inline">
+										<button class="layui-btn layui-btn-small layui-btn-normal  edit-btn" data-id="1"><i class="layui-icon">&#xe642;</i></button>
+										<button class="layui-btn layui-btn-small layui-btn-danger del-btn" data-id="1"><i class="layui-icon">&#xe640;</i></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="page-wrap">
+						<ul class="pagination">
+							<li class="disabled"><span>«</span></li>
+							<li class="active"><span>1</span></li>
+							<li>
+								<a href="/admin/category/index.html?page=2">2</a>
+							</li>
+							<li>
+								<a href="/admin/category/index.html?page=2">»</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+		   var SCOPE={
+		       static:'/static',
+		       index:'/admin/category/index.html',
+		       add:'add.html',
+		       save:'/admin/category/save.html',
+		       edit:'add.html',
+		       updateEdit:'/admin/category/updateedit.html',
+		       status:'/admin/category/updatestatus.html',
+		       del:'/admin/category/del.html',
+		       delAll:'/admin/category/deleteall.html',
+		       listOrderAll:'/admin/category/listorderall.html'
+		   }
+
+		</script>
+		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script>
+			layui.config({
+				base: '../../static/admin/js/module/'
+			}).extend({
+				dialog: 'dialog',
+				load: 'load',
+				common: 'common',
+				tool: 'tool'
+			});
+			layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog', 'common', 'tool','element'], function() {
+				var form = layui.form(),
+					layer = layui.layer,
+					$ = layui.jquery,
+					laypage = layui.laypage,
+					laydate = layui.laydate,
+					common = layui.common,
+					tool = layui.tool,
+					element = layui.element(),
+					dialog = layui.dialog;
+
+				//获取当前iframe的name值
+				var iframeObj = $(window.frameElement).attr('name');
+				//全选
+				form.on('checkbox(allChoose)', function(data) {
+					var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]');
+					child.each(function(index, item) {
+						item.checked = data.elem.checked;
+					});
+					form.render('checkbox');
+				});
+				form.render();
+				//删除
+				$('.del-btn').on('click', function() {
+					var id = $(this).attr('data-id');
+					common.del(SCOPE.del, id);
+				})
+
+				//提示
+				$('.addBtn').click(function() {
+
+					//将iframeObj传递给父级窗口
+					parent.parent.page("生活分类添加", SCOPE.add, iframeObj, w = "700px", h = "600px");
+					return false;
+
+				}).mouseenter(function() {
+
+					common.tips('添加', '.addBtn');
+
+				})
+
+				//排序
+				$('.listOrderBtn').click(function() {
+
+					common.listOrderAll(SCOPE.listOrderAll, '您确定要进行排序吗？');
+					return false;
+
+				}).mouseenter(function() {
+
+					common.tips('排序', '.listOrderBtn');
+
+				})
+
+				//批量删除
+				$('.delBtn').click(function() {
+
+					common.delAll(SCOPE.delAll, '您确定要批量删除栏目吗');
+					return false;
+
+				}).mouseenter(function(e) {
+
+					common.tips('删除', '.delBtn');
+
+				})
+
+				//修改状态
+				$('#category-table-list').on('click', '.category-list-status', function() {
+					var That = $(this);
+					var status = That.attr('data-status');
+					var id = That.parent().attr('data-id');
+					if(status == 1) {
+						$.post(SCOPE.status, { status: 2, id: id }, function(res) {
+							if(res.status == 1) {
+								layer.msg(res.message);
+								That.removeClass('layui-btn-normal').addClass('layui-btn-warm').html('待审').attr('data-status', 2);
+							} else {
+								layer.msg(res.message);
+							}
+						}, 'json');
+						$(document).ajaxError(function() {
+							layer.msg('网络请求失败！');
+						});
+
+					} else if(status == 2) {
+						$.post(SCOPE.status, { status: 1, id: id }, function(res) {
+							if(res.status == 1) {
+								layer.msg(res.message);
+								That.removeClass('layui-btn-warm').addClass('layui-btn-normal').html('正常').attr('data-status', 1);
+							} else {
+								layer.msg(res.message);
+							}
+						}, 'json');
+						$(document).ajaxError(function() {
+							layer.msg('网络请求失败！');
+						});
+
+					} else if(status == 0) {
+
+					}
+				})
+				//编辑栏目
+				$('#category-table-list').on('click', '.edit-btn', function() {
+					var That = $(this);
+					var id = That.attr('data-id');
+					//将iframeObj传递给父级窗口
+					parent.page("生活分类添加", SCOPE.edit + "?id=" + id, iframeObj, w = "700px", h = "330px");
+				})
+			});
+			
+		</script>
+	</body>
+
+</html>

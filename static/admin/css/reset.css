@@ -44,7 +44,7 @@
   color: #333;
 }
 .layui-btn-primary:hover {
-  border-color: #1e9fff;
+  border-color: #00b5f9;
   color: #333;
 }
 .layui-tab-bar {
@@ -60,7 +60,7 @@
   background-color: #fff;
 }
 .layui-elem-quote {
-  border-left: 5px solid #1e9fff;
+  border-left: 5px solid #00b5f9;
 }
 /*清楚浮动*/
 .clearfix {
@@ -80,7 +80,7 @@
 }
 .layui-nav-no-bg.layui-nav-tree .layui-nav-item a:hover {
   background-color: transparent;
-  color: #1e9fff;
+  color: #00b5f9;
 }
 .layui-nav-no-bg.layui-nav .layui-nav-item a {
   color: #333;
@@ -101,12 +101,12 @@
 .layui-nav-no-bg.layui-nav-tree .layui-this,
 .layui-nav-no-bg.layui-nav-tree .layui-this > a:hover {
   background-color: #fff;
-  color: #1e9fff;
+  color: #00b5f9;
 }
 .layui-nav-no-bg.layui-nav-tree .layui-this > a {
   background-color: #fff;
-  color: #1e9fff;
-  margin-right: -30px;
+  color: #00b5f9;
+  border-left: 3px solid #00b5f9;
 }
 .layui-nav-no-bg .layui-nav-bar {
   display: none;
