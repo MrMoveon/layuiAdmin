@@ -14,10 +14,10 @@
 			<div class="column-edge">
 				<ul class="layui-nav layui-nav-tree layui-nav-no-bg" lay-filter="column">
 					<li class="layui-nav-item">
-						<a href="menu1.html">后台菜单列表</a>
+						<a href="menu2.html">前台菜单列表</a>
 					</li>
 					<li class="layui-nav-item layui-this">
-						<a href="menu-add.html">添加菜单</a>
+						<a href="menu-add2.html">添加菜单</a>
 					</li>
 				</ul>
 			</div>
@@ -27,28 +27,39 @@
 						<legend>添加菜单</legend>
 					</fieldset>
 					<div class="layui-form-item">
-						<label class="layui-form-label">上级：</label>
+						<label class="layui-form-label">菜单分类：</label>
 						<div class="layui-input-block">
 							<select name="category" lay-verify="required">
-								<option value=""></option>
-								<option value="0">作为一级菜单</option>
-								<option value="1">菜单管理</option>
-								<option value="2">&nbsp;&nbsp;&nbsp;&nbsp;├─后台菜单</option>
-								<option value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─菜单列表</option>
-								<option value="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─菜单添加</option>
-								<option value="2">&nbsp;&nbsp;&nbsp;&nbsp;├─前台菜单</option>
-								<option value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─菜单列表</option>
-								<option value="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─菜单添加</option>
+								<option value="0">作为顶级菜单</option>
+								<option value="010">关于我们</option>
+								<option value="021">产品中心</option>
+								<option value="021">新闻中心</option>
+								<option value="021">业务范围</option>
+								<option value="021">联系我们</option>
+								<option value="021">在线留言</option>
 							</select>
 						</div>
-
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">父级：</label>
+						<div class="layui-input-block">
+							<select name="category2" lay-verify="required">
+								<option value="0">/</option>
+								<option value="010">首页</option>
+								<option value="010">关于我们</option>
+								<option value="021">产品中心</option>
+								<option value="021">新闻中心</option>
+								<option value="021">业务范围</option>
+								<option value="021">联系我们</option>
+								<option value="021">在线留言</option>
+							</select>
+						</div>
 					</div>
 					<div class="layui-form-item">
 						<label class="layui-form-label">名称：</label>
 						<div class="layui-input-block">
 							<input type="text" name="title" required lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">
 						</div>
-
 					</div>
 					<div class="layui-form-item">
 						<label class="layui-form-label">应用：</label>
@@ -58,18 +69,46 @@
 
 					</div>
 					<div class="layui-form-item">
-						<label class="layui-form-label">控制器：</label>
+						<label class="layui-form-label">标签：</label>
 						<div class="layui-input-block">
-							<input type="text" name="title" required lay-verify="required" placeholder="请输入控制器" autocomplete="off" class="layui-input">
+							<input type="text" name="label" required lay-verify="required" placeholder="请输入标签" autocomplete="off" class="layui-input" value="关于我们">
 						</div>
 
 					</div>
 					<div class="layui-form-item">
-						<label class="layui-form-label">方法：</label>
+						<label class="layui-form-label">内部跳转：</label>
 						<div class="layui-input-block">
-							<input type="text" name="title" required lay-verify="required" placeholder="请输入方法" autocomplete="off" class="layui-input">
+							<select name="link1">
+								<option value="">请选择跳转项</option>
+							  <optgroup label="栏目">
+							    <option value="010">首页</option>
+								<option value="010">关于我们</option>
+								<option value="021">产品中心</option>
+								<option value="021">新闻中心</option>
+							  </optgroup>
+							  <optgroup label="单页">
+							    <option value="021">业务范围</option>
+								<option value="021">联系我们</option>
+								<option value="021">在线留言</option>
+							  </optgroup>
+							</select>
 						</div>
-
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">外部链接：</label>
+						<div class="layui-input-block">
+							<input type="text" name="link2" required lay-verify="required" placeholder="请输入外部链接" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">打开方式：</label>
+						<div class="layui-input-block">
+							<select name="category" lay-verify="required">
+								<option value="0">默认</option>
+								<option value="010">新窗口打开</option>
+								
+							</select>
+						</div>
 					</div>
 					<div class="layui-form-item">
 						<label class="layui-form-label">图标：</label>
@@ -85,12 +124,6 @@
 							<input type="radio" name="status" value="0" title="隐藏">
 						</div>
 
-					</div>
-					<div class="layui-form-item layui-form-text">
-						<label class="layui-form-label">备注</label>
-						<div class="layui-input-block">
-							<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
-						</div>
 					</div>
 
 					<div class="layui-form-item">

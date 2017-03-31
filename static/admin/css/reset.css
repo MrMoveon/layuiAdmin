@@ -71,9 +71,6 @@
   content: '';
   clear: both;
 }
-.gray-bg {
-  background: #f5f5f5;
-}
 .layui-nav-no-bg {
   background: transparent;
   width: auto;
@@ -107,6 +104,7 @@
   background-color: #fff;
   color: #00b5f9;
   border-left: 3px solid #00b5f9;
+  margin-right: -20px;
 }
 .layui-nav-no-bg .layui-nav-bar {
   display: none;
