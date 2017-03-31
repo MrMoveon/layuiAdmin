@@ -2098,11 +2098,7 @@
   overflow-x: hidden;
   margin-left: 150px;
 }
-.column-content .white-bg {
-  background: #fff;
-  padding: 20px;
-}
-.column-content .column-content-detail {
+.column-content-detail {
   background: #fff;
   padding: 20px;
   margin: 0;

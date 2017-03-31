@@ -1,7 +1,15 @@
+layui.config({
+				base: '../../static/admin/js/module/'
+			}).extend({
+				dialog: 'dialog',
+				load: 'load',
+				common: 'common',
+				tool: 'tool'
+			});
+
 /**
  * 控制iframe窗口的刷新操作
  */
-
 var iframeObjName;
 
 //父级弹出页面

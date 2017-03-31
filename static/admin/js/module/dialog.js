@@ -38,9 +38,19 @@ layui.define(['jquery', 'layer'], function (exports) {
                     maxmin: true,
                     content: url
                 });
-            }
+            },
+            /**
+			 * 提示
+			 * @param title
+			 * @param obj
+			 */
+			tips: function(title, obj) {
+				layer.tips(title, obj, {
+					tips: [1, '#444c63'], //还可配置颜色
+					time: 1000
+				});
+			}
         };
-
         //输出test接口
         exports('dialog', dialog);
     }

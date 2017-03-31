@@ -161,15 +161,9 @@
 			}
 		</script>
 		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script>
-			layui.config({
-				base: '../../static/admin/js/module/'
-			}).extend({
-				dialog: 'dialog',
-				load: 'load',
-				common: 'common',
-				tool: 'tool'
-			});
+			
 			layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog', 'common', 'tool', 'element', 'upload', 'layedit'], function() {
 				var form = layui.form(),
 					layer = layui.layer,

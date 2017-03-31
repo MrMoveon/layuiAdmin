@@ -123,7 +123,6 @@
 						</tr>
 					</tbody>
 				</table>
-				<div id="page" style="text-align: center;"></div>
 				<div class="page-wrap">
 					<ul class="pagination">
 						<li class="disabled"><span>«</span></li>
@@ -157,14 +156,6 @@
 		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script>
-			layui.config({
-				base: '../../static/admin/js/module/'
-			}).extend({
-				dialog: 'dialog',
-				load: 'load',
-				common: 'common',
-				tool: 'tool'
-			});
 			layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog', 'common', 'tool'], function() {
 				var form = layui.form(),
 					layer = layui.layer,
@@ -201,7 +192,7 @@
 
 				}).mouseenter(function() {
 
-					common.tips('添加', '.addBtn');
+					dialog.tips('添加', '.addBtn');
 
 				})
 
@@ -213,7 +204,7 @@
 
 				}).mouseenter(function() {
 
-					common.tips('排序', '.listOrderBtn');
+					dialog.tips('排序', '.listOrderBtn');
 
 				})
 
@@ -225,7 +216,7 @@
 
 				}).mouseenter(function(e) {
 
-					common.tips('删除', '.delBtn');
+					dialog.tips('删除', '.delBtn');
 
 				})
 

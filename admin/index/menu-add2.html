@@ -10,22 +10,8 @@
 		<link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css" />
 	</head>
 	<body>
-		<div class="wrap-container column-wrap clearfix">
-			<div class="column-edge">
-				<ul class="layui-nav layui-nav-tree layui-nav-no-bg" lay-filter="column">
-					<li class="layui-nav-item">
-						<a href="menu2.html">前台菜单列表</a>
-					</li>
-					<li class="layui-nav-item layui-this">
-						<a href="menu-add2.html">添加菜单</a>
-					</li>
-				</ul>
-			</div>
-			<div class="column-content">
-				<form class="layui-form column-content-detail">
-					<fieldset class="layui-elem-field layui-field-title">
-						<legend>添加菜单</legend>
-					</fieldset>
+		<div class="wrap-container">
+				<form class="layui-form" style="width: 90%;">
 					<div class="layui-form-item">
 						<label class="layui-form-label">菜单分类：</label>
 						<div class="layui-input-block">
@@ -56,24 +42,10 @@
 						</div>
 					</div>
 					<div class="layui-form-item">
-						<label class="layui-form-label">名称：</label>
-						<div class="layui-input-block">
-							<input type="text" name="title" required lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">
-						</div>
-					</div>
-					<div class="layui-form-item">
-						<label class="layui-form-label">应用：</label>
-						<div class="layui-input-block">
-							<input type="text" name="title" required lay-verify="required" placeholder="请输入应用" autocomplete="off" class="layui-input">
-						</div>
-
-					</div>
-					<div class="layui-form-item">
 						<label class="layui-form-label">标签：</label>
 						<div class="layui-input-block">
 							<input type="text" name="label" required lay-verify="required" placeholder="请输入标签" autocomplete="off" class="layui-input" value="关于我们">
 						</div>
-
 					</div>
 					<div class="layui-form-item">
 						<label class="layui-form-label">内部跳转：</label>
@@ -133,7 +105,6 @@
 						</div>
 					</div>
 				</form>
-			</div>
 		</div>
 
 		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>

@@ -103,17 +103,7 @@ layui.define(['jquery', 'layer', 'dialog'], function(exports) {
 				'cancel': function() {}
 			});
 		},
-		/**
-		 * 提示
-		 * @param title
-		 * @param obj
-		 */
-		tips: function(title, obj) {
-			layer.tips(title, obj, {
-				tips: [1, '#444c63'], //还可配置颜色
-				time: 1000
-			});
-		}
+		
 	};
 
 	exports('common', common);
