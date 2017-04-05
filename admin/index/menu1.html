@@ -18,7 +18,7 @@
 						<div class="layui-form-item">
 							<div class="layui-inline tool-btn">
 								<button class="layui-btn layui-btn-small layui-btn-normal addBtn hidden-xs" data-url="menu-add.html"><i class="layui-icon">&#xe654;</i></button>
-								<button class="layui-btn layui-btn-small layui-btn-warm listOrderBtn hidden-xs"><i class="iconfont">&#xe656;</i></button>
+								<button class="layui-btn layui-btn-small layui-btn-warm listOrderBtn hidden-xs" data-url="menu-add.html"><i class="iconfont">&#xe656;</i></button>
 							</div>
 							<div class="layui-inline">
 								<input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
@@ -33,7 +33,7 @@
 							<button class="layui-btn layui-btn-normal" lay-submit="search">搜索</button>
 						</div>
 					</form>
-					<div class="layui-form" id="category-table-list">
+					<div class="layui-form" id="table-list">
 						<table class="layui-table" lay-skin="line">
 							<colgroup>
 								<col width="50">
@@ -64,12 +64,12 @@
 									<td>菜单管理
 										<a class="layui-btn layui-btn-mini layui-btn-normal showSubBtn" data-id='1'>+</a>
 									</td>
-									<td><button class="layui-btn layui-btn-mini layui-btn-normal">显示</button></td>
+									<td><button class="layui-btn layui-btn-mini layui-btn-normal table-list-status">显示 </button></td>
 									<td>
 										<div class="layui-inline">
-											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1"><i class="layui-icon">&#xe654;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="1"><i class="layui-icon">&#xe642;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="1"><i class="layui-icon">&#xe640;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe654;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe642;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe640;</i></button>
 										</div>
 									</td>
 								</tr>
@@ -81,12 +81,12 @@
 									<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─后台菜单
 										<a class="layui-btn layui-btn-mini layui-btn-normal showSubBtn" data-id='2'>+</a>
 									</td>
-									<td><button class="layui-btn layui-btn-mini layui-btn-normal">显示</button></td>
+									<td><button class="layui-btn layui-btn-mini layui-btn-normal table-list-status">显示 </button></td>
 									<td>
 										<div class="layui-inline">
-											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1"><i class="layui-icon">&#xe654;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="2"><i class="layui-icon">&#xe642;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="2"><i class="layui-icon">&#xe640;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe654;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="2" data-url="menu-add.html"><i class="layui-icon">&#xe642;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="2" data-url="menu-add.html"><i class="layui-icon">&#xe640;</i></button>
 										</div>
 									</td>
 								</tr>
@@ -96,12 +96,12 @@
 									<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="3"></td>
 									<td class="hidden-xs">Admin</td>
 									<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─菜单列表</td>
-									<td><button class="layui-btn layui-btn-mini layui-btn-normal">显示</button></td>
+									<td><button class="layui-btn layui-btn-mini layui-btn-normal table-list-status">显示 </button></td>
 									<td>
 										<div class="layui-inline">
-											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1"><i class="layui-icon">&#xe654;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="3"><i class="layui-icon">&#xe642;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="3"><i class="layui-icon">&#xe640;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe654;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="3" data-url="menu-add.html"><i class="layui-icon">&#xe642;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="3" data-url="menu-add.html"><i class="layui-icon">&#xe640;</i></button>
 										</div>
 									</td>
 								</tr>
@@ -111,12 +111,12 @@
 									<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="4"></td>
 									<td class="hidden-xs">Admin</td>
 									<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─添加菜单</td>
-									<td><button class="layui-btn layui-btn-mini layui-btn-normal">显示</button></td>
+									<td><button class="layui-btn layui-btn-mini layui-btn-normal table-list-status">显示 </button></td>
 									<td>
 										<div class="layui-inline">
-											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1"><i class="layui-icon">&#xe654;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="4"><i class="layui-icon">&#xe642;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="4"><i class="layui-icon">&#xe640;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe654;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="4" data-url="menu-add.html"> <i class="layui-icon">&#xe642;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="4" data-url="menu-add.html"><i class="layui-icon">&#xe640;</i></button>
 										</div>
 									</td>
 								</tr>
@@ -126,12 +126,12 @@
 									<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="4"></td>
 									<td class="hidden-xs">Admin</td>
 									<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─添加菜单</td>
-									<td><button class="layui-btn layui-btn-mini layui-btn-normal">显示</button></td>
+									<td><button class="layui-btn layui-btn-mini layui-btn-normal table-list-status">显示 </button></td>
 									<td>
 										<div class="layui-inline">
-											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1"><i class="layui-icon">&#xe654;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="4"><i class="layui-icon">&#xe642;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="4"><i class="layui-icon">&#xe640;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe654;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="4" data-url="menu-add.html"><i class="layui-icon">&#xe642;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="4" data-url="menu-add.html"><i class="layui-icon">&#xe640;</i></button>
 										</div>
 									</td>
 								</tr>
@@ -143,12 +143,12 @@
 									<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─前台菜单
 										<a class="layui-btn layui-btn-mini layui-btn-normal showSubBtn" data-id='5'>+</a>
 									</td>
-									<td><button class="layui-btn layui-btn-mini layui-btn-warm">隐藏</button></td>
+									<td><button class="layui-btn layui-btn-mini layui-btn-warm table-list-status">隐藏</button></td>
 									<td>
 										<div class="layui-inline">
-											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1"><i class="layui-icon">&#xe654;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="5"><i class="layui-icon">&#xe642;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="5"><i class="layui-icon">&#xe640;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe654;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="5" data-url="menu-add.html"><i class="layui-icon">&#xe642;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="5" data-url="menu-add.html"><i class="layui-icon">&#xe640;</i></button>
 										</div>
 									</td>
 								</tr>
@@ -158,12 +158,12 @@
 									<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="6"></td>
 									<td class="hidden-xs">Admin</td>
 									<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─菜单列表</td>
-									<td><button class="layui-btn layui-btn-mini layui-btn-normal">显示</button></td>
+									<td><button class="layui-btn layui-btn-mini layui-btn-normal table-list-status">显示 </button></td>
 									<td>
 										<div class="layui-inline">
-											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1"><i class="layui-icon">&#xe654;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="6"><i class="layui-icon">&#xe642;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="6"><i class="layui-icon">&#xe640;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe654;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="6" data-url="menu-add.html"><i class="layui-icon">&#xe642;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="6" data-url="menu-add.html"><i class="layui-icon">&#xe640;</i></button>
 										</div>
 									</td>
 								</tr>
@@ -173,12 +173,12 @@
 									<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="7"></td>
 									<td class="hidden-xs">Admin</td>
 									<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─添加菜单</td>
-									<td><button class="layui-btn layui-btn-mini layui-btn-normal">显示</button></td>
+									<td><button class="layui-btn layui-btn-mini layui-btn-normal table-list-status">显示 </button></td>
 									<td>
 										<div class="layui-inline">
-											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1"><i class="layui-icon">&#xe654;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="7"><i class="layui-icon">&#xe642;</i></button>
-											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="7"><i class="layui-icon">&#xe640;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  add-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe654;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-normal  edit-btn" data-id="7" data-url="menu-add.html"><i class="layui-icon">&#xe642;</i></button>
+											<button class="layui-btn layui-btn-mini layui-btn-danger del-btn" data-id="7" data-url="menu-add.html"><i class="layui-icon">&#xe640;</i></button>
 										</div>
 									</td>
 								</tr>
@@ -187,81 +187,22 @@
 					</div>
 				</div>
 		</div>
-		<script type="text/javascript">
-			var SCOPE = {
-				static: '/static',
-				index: '/admin/category/index.html',
-				add: 'menu-add.html',
-				edit: 'menu-add.html',
-				updateEdit: '/admin/category/updateedit.html',
-				status: '/admin/category/updatestatus.html',
-				del: '/admin/category/del.html',
-				listOrderAll: '/admin/category/listorderall.html'
-			}
-		</script>
 		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script>
-			layui.use(['form', 'jquery', 'layer', 'dialog', 'common'], function() {
-				var form = layui.form(),
-					layer = layui.layer,
-					$ = layui.jquery,
-					common = layui.common,
-					dialog = layui.dialog;
-
-				//获取当前iframe的name值
-				var iframeObj = $(window.frameElement).attr('name');
-				//全选
-				form.on('checkbox(allChoose)', function(data) {
-					var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]');
-					child.each(function(index, item) {
-						item.checked = data.elem.checked;
-					});
-					form.render('checkbox');
-				});
-				form.render();
-				
-				//顶部添加
-				$('.addBtn').click(function() {
-					//将iframeObj传递给父级窗口,执行操作完成刷新
-					parent.page("菜单添加", SCOPE.add, iframeObj, w = "700px", h = "620px");
-					return false;
-
-				}).mouseenter(function() {
-
-					dialog.tips('添加', '.addBtn');
-
-				})
-				//列表添加
-				$('.add-btn').click(function() {
-					//将iframeObj传递给父级窗口
-					parent.page("菜单添加", SCOPE.add, iframeObj, w = "700px", h = "620px");
-					return false;
-
-				})
-				//删除
-				$('.del-btn').on('click', function() {
-					var id = $(this).attr('data-id');
-					common.del(SCOPE.del, id);
-				})
-
-				//排序
-				$('.listOrderBtn').click(function() {
-
-					common.listOrderAll(SCOPE.listOrderAll, '您确定要进行排序吗？');
-					return false;
-
-				}).mouseenter(function() {
-
-					dialog.tips('排序', '.listOrderBtn');
-
-				})
-				//编辑栏目
-				$('#category-table-list').on('click', '.edit-btn', function() {
+			layui.use(['jquery'], function() {
+				var $=layui.jquery;
+				//修改状态
+				$('#table-list').on('click', '.table-list-status', function() {
 					var That = $(this);
-					var id = That.attr('data-id');
-					//将iframeObj传递给父级窗口
-					parent.page("菜单编辑", SCOPE.edit + "?id=" + id, iframeObj, w = "700px", h = "620px");
+					var status = That.attr('data-status');
+					var id = That.parent().attr('data-id');
+					if(status == 1) {
+						That.removeClass('layui-btn-normal').addClass('layui-btn-warm').html('隐藏').attr('data-status', 2);
+					} else if(status == 2) {
+						That.removeClass('layui-btn-warm').addClass('layui-btn-normal').html('显示').attr('data-status', 1);
+
+					}
 				})
 				//栏目展示隐藏
 				$('.showSubBtn').on('click', function() {

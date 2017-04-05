@@ -51,7 +51,7 @@
 			</div>
 			<div class="column-content">
 				<div class="column-content-detail">
-					<form class="layui-form" action="{:url('category/index')}">
+					<form class="layui-form" action="">
 						<div class="layui-form-item">
 							<div class="layui-inline tool-btn">
 								<button class="layui-btn layui-btn-small layui-btn-normal addBtn"><i class="layui-icon">&#xe654;</i></button>
@@ -72,7 +72,7 @@
 							<button class="layui-btn layui-btn-normal" lay-submit="search">搜索</button>
 						</div>
 					</form>
-					<div class="layui-form" id="category-table-list">
+					<div class="layui-form" id="table-list">
 						<table class="layui-table" lay-even lay-skin="nob">
 							<colgroup>
 								<col width="50">
@@ -175,140 +175,9 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			var SCOPE = {
-				static: '/static',
-				index: '/admin/category/index.html',
-				add: 'add.html',
-				save: '/admin/category/save.html',
-				edit: 'add.html',
-				updateEdit: '/admin/category/updateedit.html',
-				status: '/admin/category/updatestatus.html',
-				del: '/admin/category/del.html',
-				delAll: '/admin/category/deleteall.html',
-				listOrderAll: '/admin/category/listorderall.html'
-			}
-		</script>
 		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
-
-		<script>
-			layui.config({
-				base: '../../static/admin/js/module/'
-			}).extend({
-				dialog: 'dialog',
-				load: 'load',
-				common: 'common',
-				tool: 'tool'
-			});
-			layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog', 'common', 'tool', 'element'], function() {
-				var form = layui.form(),
-					layer = layui.layer,
-					$ = layui.jquery,
-					laypage = layui.laypage,
-					laydate = layui.laydate,
-					common = layui.common,
-					tool = layui.tool,
-					element = layui.element(),
-					dialog = layui.dialog;
-
-				//获取当前iframe的name值
-				var iframeObj = $(window.frameElement).attr('name');
-				//全选
-				form.on('checkbox(allChoose)', function(data) {
-					var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]');
-					child.each(function(index, item) {
-						item.checked = data.elem.checked;
-					});
-					form.render('checkbox');
-				});
-				form.render();
-				//删除
-				$('.del-btn').on('click', function() {
-					var id = $(this).attr('data-id');
-					common.del(SCOPE.del, id);
-				})
-
-				//提示
-				$('.addBtn').click(function() {
-
-					//将iframeObj传递给父级窗口
-					parent.parent.page("生活分类添加", SCOPE.add, iframeObj, w = "700px", h = "600px");
-					return false;
-
-				}).mouseenter(function() {
-
-					dialog.tips('添加', '.addBtn');
-
-				})
-
-				//排序
-				$('.listOrderBtn').click(function() {
-
-					common.listOrderAll(SCOPE.listOrderAll, '您确定要进行排序吗？');
-					return false;
-
-				}).mouseenter(function() {
-
-					dialog.tips('排序', '.listOrderBtn');
-
-				})
-
-				//批量删除
-				$('.delBtn').click(function() {
-
-					common.delAll(SCOPE.delAll, '您确定要批量删除栏目吗');
-					return false;
-
-				}).mouseenter(function(e) {
-
-					dialog.tips('删除', '.delBtn');
-
-				})
-
-				//修改状态
-				$('#category-table-list').on('click', '.category-list-status', function() {
-					var That = $(this);
-					var status = That.attr('data-status');
-					var id = That.parent().attr('data-id');
-					if(status == 1) {
-						$.post(SCOPE.status, { status: 2, id: id }, function(res) {
-							if(res.status == 1) {
-								layer.msg(res.message);
-								That.removeClass('layui-btn-normal').addClass('layui-btn-warm').html('待审').attr('data-status', 2);
-							} else {
-								layer.msg(res.message);
-							}
-						}, 'json');
-						$(document).ajaxError(function() {
-							layer.msg('网络请求失败！');
-						});
-
-					} else if(status == 2) {
-						$.post(SCOPE.status, { status: 1, id: id }, function(res) {
-							if(res.status == 1) {
-								layer.msg(res.message);
-								That.removeClass('layui-btn-warm').addClass('layui-btn-normal').html('正常').attr('data-status', 1);
-							} else {
-								layer.msg(res.message);
-							}
-						}, 'json');
-						$(document).ajaxError(function() {
-							layer.msg('网络请求失败！');
-						});
-
-					} else if(status == 0) {
-
-					}
-				})
-				//编辑栏目
-				$('#category-table-list').on('click', '.edit-btn', function() {
-					var That = $(this);
-					var id = That.attr('data-id');
-					//将iframeObj传递给父级窗口
-					parent.page("生活分类添加", SCOPE.edit + "?id=" + id, iframeObj, w = "700px", h = "330px");
-				})
-			});
-		</script>
+		<script src="../../static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
+		
 	</body>
 
 </html>

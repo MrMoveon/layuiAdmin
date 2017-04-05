@@ -17,9 +17,9 @@
 				<form class="layui-form" action="{:url('category/index')}">
 					<div class="layui-form-item">
 						<div class="layui-inline tool-btn">
-		                    <button class="layui-btn layui-btn-small layui-btn-normal addBtn"><i class="layui-icon">&#xe654;</i></button>
-		                    <button class="layui-btn layui-btn-small layui-btn-danger delBtn"><i class="layui-icon">&#xe640;</i></button>
-		                    <button class="layui-btn layui-btn-small layui-btn-warm listOrderBtn hidden-xs"><i class="iconfont">&#xe656;</i></button>
+		                    <button class="layui-btn layui-btn-small layui-btn-normal addBtn" data-url="menu-add.html"><i class="layui-icon">&#xe654;</i></button>
+		                    <button class="layui-btn layui-btn-small layui-btn-danger delBtn" data-url="menu-add.html"><i class="layui-icon">&#xe640;</i></button>
+		                    <button class="layui-btn layui-btn-small layui-btn-warm listOrderBtn hidden-xs" data-url="menu-add.html"><i class="iconfont">&#xe656;</i></button>
 		                </div>
 						<div class="layui-inline">
 							<input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
@@ -36,7 +36,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="layui-form" id="category-table-list">
+			<div class="layui-form" id="table-list">
 				<table class="layui-table" lay-even lay-skin="nob">
 					<colgroup>
 						<col width="50">
@@ -68,56 +68,11 @@
 							<td>玩具</td>
 							<td class="hidden-xs">1989-10-14</td>
 							<td class="hidden-xs">1989-10-14</td>
-							<td><button class="layui-btn layui-btn-mini layui-btn-normal">正常</button></td>
+							<td><button class="layui-btn layui-btn-mini layui-btn-normal table-list-status" data-status='1'>正常</button></td>
 							<td>
 								<div class="layui-inline">
-									<button class="layui-btn layui-btn-small layui-btn-normal  edit-btn" data-id="1"><i class="layui-icon">&#xe642;</i></button>
-									<button class="layui-btn layui-btn-small layui-btn-danger del-btn" data-id="1"><i class="layui-icon">&#xe640;</i></button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="" lay-skin="primary"  data-id="1"></td>
-							<td class="hidden-xs">1</td>
-							<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="1"></td>
-							<td>玩具</td>
-							<td class="hidden-xs">1989-10-14</td>
-							<td class="hidden-xs">1989-10-14</td>
-							<td><button class="layui-btn layui-btn-mini layui-btn-normal">正常</button></td>
-							<td>
-								<div class="layui-inline">
-									<button class="layui-btn layui-btn-small layui-btn-normal  edit-btn" data-id="1"><i class="layui-icon">&#xe642;</i></button>
-									<button class="layui-btn layui-btn-small layui-btn-danger del-btn" data-id="1"><i class="layui-icon">&#xe640;</i></button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="" lay-skin="primary"  data-id="1"></td>
-							<td class="hidden-xs">1</td>
-							<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="1"></td>
-							<td>玩具</td>
-							<td class="hidden-xs">1989-10-14</td>
-							<td class="hidden-xs">1989-10-14</td>
-							<td><button class="layui-btn layui-btn-mini layui-btn-normal">正常</button></td>
-							<td>
-								<div class="layui-inline">
-									<button class="layui-btn layui-btn-small layui-btn-normal  edit-btn" data-id="1"><i class="layui-icon">&#xe642;</i></button>
-									<button class="layui-btn layui-btn-small layui-btn-danger del-btn" data-id="1"><i class="layui-icon">&#xe640;</i></button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="" lay-skin="primary"  data-id="1"></td>
-							<td class="hidden-xs">1</td>
-							<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="1"></td>
-							<td>玩具</td>
-							<td class="hidden-xs">1989-10-14</td>
-							<td class="hidden-xs">1989-10-14</td>
-							<td><button class="layui-btn layui-btn-mini layui-btn-normal">正常</button></td>
-							<td>
-								<div class="layui-inline">
-									<button class="layui-btn layui-btn-small layui-btn-normal  edit-btn" data-id="1"><i class="layui-icon">&#xe642;</i></button>
-									<button class="layui-btn layui-btn-small layui-btn-danger del-btn" data-id="1"><i class="layui-icon">&#xe640;</i></button>
+									<button class="layui-btn layui-btn-small layui-btn-normal  edit-btn" data-id="1" data-url="menu-add.html"><i class="layui-icon">&#xe642;</i></button>
+									<button class="layui-btn layui-btn-small layui-btn-danger del-btn" data-id="1" data-url="menu-add.html"vv><i class="layui-icon">&#xe640;</i></button>
 								</div>
 							</td>
 						</tr>
@@ -137,131 +92,24 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			
-		   var SCOPE={
-		       static:'/static',
-		       index:'/admin/category/index.html',
-		       add:'add.html',
-		       save:'/admin/category/save.html',
-		       edit:'add.html',
-		       updateEdit:'/admin/category/updateedit.html',
-		       status:'/admin/category/updatestatus.html',
-		       del:'/admin/category/del.html',
-		       delAll:'/admin/category/deleteall.html',
-		       listOrderAll:'/admin/category/listorderall.html'
-		   }
-
-		</script>
 		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script>
-			layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog', 'common', 'tool'], function() {
-				var form = layui.form(),
-					layer = layui.layer,
-					$ = layui.jquery,
-					laypage = layui.laypage,
-					laydate = layui.laydate,
-					common = layui.common,
-					tool = layui.tool,
-					dialog = layui.dialog;
-
-				//获取当前iframe的name值
-				var iframeObj = $(window.frameElement).attr('name');
-				//全选
-				form.on('checkbox(allChoose)', function(data) {
-					var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]');
-					child.each(function(index, item) {
-						item.checked = data.elem.checked;
-					});
-					form.render('checkbox');
-				});
-				form.render();
-				//删除
-				$('.del-btn').on('click', function() {
-					var id = $(this).attr('data-id');
-					common.del(SCOPE.del, id);
-				})
-
-				//提示
-				$('.addBtn').click(function() {
-
-					//将iframeObj传递给父级窗口
-					parent.parent.page("生活分类添加", SCOPE.add, iframeObj, w = "700px", h = "600px");
-					return false;
-
-				}).mouseenter(function() {
-
-					dialog.tips('添加', '.addBtn');
-
-				})
-
-				//排序
-				$('.listOrderBtn').click(function() {
-
-					common.listOrderAll(SCOPE.listOrderAll, '您确定要进行排序吗？');
-					return false;
-
-				}).mouseenter(function() {
-
-					dialog.tips('排序', '.listOrderBtn');
-
-				})
-
-				//批量删除
-				$('.delBtn').click(function() {
-
-					common.delAll(SCOPE.delAll, '您确定要批量删除栏目吗');
-					return false;
-
-				}).mouseenter(function(e) {
-
-					dialog.tips('删除', '.delBtn');
-
-				})
-
+			layui.use(['jquery'], function() {
+				var $ = layui.jquery;
 				//修改状态
-				$('#category-table-list').on('click', '.category-list-status', function() {
+				$('#table-list').on('click', '.table-list-status', function() {
 					var That = $(this);
 					var status = That.attr('data-status');
 					var id = That.parent().attr('data-id');
 					if(status == 1) {
-						$.post(SCOPE.status, { status: 2, id: id }, function(res) {
-							if(res.status == 1) {
-								layer.msg(res.message);
-								That.removeClass('layui-btn-normal').addClass('layui-btn-warm').html('待审').attr('data-status', 2);
-							} else {
-								layer.msg(res.message);
-							}
-						}, 'json');
-						$(document).ajaxError(function() {
-							layer.msg('网络请求失败！');
-						});
-
+						That.removeClass('layui-btn-normal').addClass('layui-btn-warm').html('隐藏').attr('data-status', 2);
 					} else if(status == 2) {
-						$.post(SCOPE.status, { status: 1, id: id }, function(res) {
-							if(res.status == 1) {
-								layer.msg(res.message);
-								That.removeClass('layui-btn-warm').addClass('layui-btn-normal').html('正常').attr('data-status', 1);
-							} else {
-								layer.msg(res.message);
-							}
-						}, 'json');
-						$(document).ajaxError(function() {
-							layer.msg('网络请求失败！');
-						});
-
-					} else if(status == 0) {
+						That.removeClass('layui-btn-warm').addClass('layui-btn-normal').html('显示').attr('data-status', 1);
 
 					}
 				})
-				//编辑栏目
-				$('#category-table-list').on('click', '.edit-btn', function() {
-					var That = $(this);
-					var id = That.attr('data-id');
-					//将iframeObj传递给父级窗口
-					parent.page("生活分类添加", SCOPE.edit + "?id=" + id, iframeObj, w = "700px", h = "330px");
-				})
+				
 			});
 		</script>
 	</body>
