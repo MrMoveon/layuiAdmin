@@ -2,16 +2,12 @@ layui.config({
 	base: '../../static/admin/js/module/'
 }).extend({
 	dialog: 'dialog',
-	load: 'load',
-	common: 'common',
-	tool: 'tool'
 });
 
-layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog', 'common', 'tool', 'element'], function() {
+layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog',   'element'], function() {
 	var form = layui.form(),
 		layer = layui.layer,
 		$ = layui.jquery,
-		common = layui.common,
 		dialog = layui.dialog;
 	//获取当前iframe的name值
 	var iframeObj = $(window.frameElement).attr('name');
@@ -23,6 +19,7 @@ layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog', 'common', 
 		});
 		form.render('checkbox');
 	});
+	//渲染表单
 	form.render();	
 	//顶部添加
 	$('.addBtn').click(function() {
@@ -39,7 +36,15 @@ layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog', 'common', 
 	//顶部排序
 	$('.listOrderBtn').click(function() {
 		var url=$(this).attr('data-url');
-		common.listOrderAll(url, '您确定要进行排序吗？');
+		dialog.confirm({
+			message:'您确定要进行排序吗？',
+			success:function(){
+				layer.msg('确定了')
+			},
+			cancel:function(){
+				layer.msg('取消了')
+			}
+		})
 		return false;
 
 	}).mouseenter(function() {
@@ -50,7 +55,15 @@ layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog', 'common', 
 	//顶部批量删除
 	$('.delBtn').click(function() {
 		var url=$(this).attr('data-url');
-		common.delAll(url, '您确定要删除选中项？');
+		dialog.confirm({
+			message:'您确定要删除选中项',
+			success:function(){
+				layer.msg('删除了')
+			},
+			cancel:function(){
+				layer.msg('取消了')
+			}
+		})
 		return false;
 
 	}).mouseenter(function() {
@@ -69,11 +82,19 @@ layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog', 'common', 
 	$('#table-list').on('click', '.del-btn', function() {
 		var url=$(this).attr('data-url');
 		var id = $(this).attr('data-id');
-		common.del(url, id);
+		dialog.confirm({
+			message:'您确定要进行删除吗？',
+			success:function(){
+				layer.msg('确定了')
+			},
+			cancel:function(){
+				layer.msg('取消了')
+			}
+		})
 		return false;
 	})
 	//列表跳转
-	$('#table-list').on('click', '.go-btn', function() {
+	$('#table-list,.tool-btn').on('click', '.go-btn', function() {
 		var url=$(this).attr('data-url');
 		var id = $(this).attr('data-id');
 		window.location.href=url+"?id="+id;

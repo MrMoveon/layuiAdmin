@@ -11,8 +11,8 @@
 		<link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css" />
 	</head>
 
-	<body class="iframe-h gray-bg">
-		<div class="wrap-container column-wrap clearfix">
+	<body>
+		<div class="wrap-container clearfix">
 				<div class="column-content-detail">
 					<form class="layui-form" action="">
 						<div class="layui-form-item">
@@ -75,6 +75,21 @@
 										</div>
 									</td>
 								</tr>
+								<tr>
+									<td><input type="checkbox" name="" lay-skin="primary" data-id="1"></td>
+									<td class="hidden-xs">1</td>
+									<td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="0" data-id="1"></td>
+									<td>玩具</td>
+									<td class="hidden-xs">1989-10-14</td>
+									<td class="hidden-xs">1989-10-14</td>
+									<td><button class="layui-btn layui-btn-mini layui-btn-normal">正常</button></td>
+									<td>
+										<div class="layui-inline">
+											<button class="layui-btn layui-btn-small layui-btn-normal go-btn" data-id="1" data-url="article-detail.html"><i class="layui-icon">&#xe642;</i></button>
+											<button class="layui-btn layui-btn-small layui-btn-danger del-btn" data-id="1" data-url="article-detail.html"><i class="layui-icon">&#xe640;</i></button>
+										</div>
+									</td>
+								</tr>
 							</tbody>
 						</table>
 						<div class="page-wrap">
@@ -82,10 +97,10 @@
 								<li class="disabled"><span>«</span></li>
 								<li class="active"><span>1</span></li>
 								<li>
-									<a href="/admin/category/index.html?page=2">2</a>
+									<a href="#">2</a>
 								</li>
 								<li>
-									<a href="/admin/category/index.html?page=2">»</a>
+									<a href="#">»</a>
 								</li>
 							</ul>
 						</div>

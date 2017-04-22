@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="iframe-h">
+<html>
 
 	<head>
 		<meta charset="UTF-8">
@@ -11,51 +11,17 @@
 		<link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css" />
 	</head>
 
-	<body class="iframe-h">
-		<div class="wrap-container column-wrap clearfix">
-			<div class="column-edge">
-				<ul class="layui-nav layui-nav-tree layui-nav-no-bg" lay-filter="column">
-					<li class="layui-nav-item">
-						<a href="javascript:;">单页管理</a>
-						<dl class="layui-nav-child">
-							<dd>
-								<a href="column-danye.html">关于我们</a>
-							</dd>
-							<dd>
-								<a href="column-danye.html">联系我们</a>
-							</dd>
-							<dd>
-								<a href="column-danye.html">网站地图</a>
-							</dd>
-						</dl>
-					</li>
-					<li class="layui-nav-item layui-nav-itemed">
-						<a href="javascript:;">新闻中心</a>
-						<dl class="layui-nav-child">
-							<dd class="layui-this">
-								<a href="column-news.html">公司新闻</a>
-							</dd>
-							<dd>
-								<a href="column-news.html">行业新闻</a>
-							</dd>
-						</dl>
-					</li>
-					<li class="layui-nav-item">
-						<a href="column-news.html">产品</a>
-					</li>
-					<li class="layui-nav-item">
-						<a href="column-news.html">大数据</a>
-					</li>
-				</ul>
-			</div>
-			<div class="column-content">
-				<form class="layui-form column-content-detail">
-					<div class="layui-tab">
+	<body>
+		<div class="page-content-wrap">
+				<form class="layui-form">
+					<div class="layui-tab" style="margin: 0;">
 						<ul class="layui-tab-title">
+							<li><a href="article-list.html">文章列表</a></li>
 							<li class="layui-this">文章详情</li>
-							<li>SEO优化</li>
+							
 						</ul>
 						<div class="layui-tab-content">
+							<div class="layui-tab-item"></div>
 							<div class="layui-tab-item layui-show">
 								<div class="layui-form-item">
 									<label class="layui-form-label">文章名称：</label>
@@ -89,19 +55,24 @@
 										<input type="checkbox" name="label[hot]" title="热门">
 									</div>
 								</div>
-								<div class="layui-form-item">
-									<label class="layui-form-label">是否单页：</label>
-									<div class="layui-input-block">
-										<input type="checkbox" name="switch" lay-skin="switch">
-									</div>
-								</div>
 								<div class="layui-form-item layui-form-text">
 									<label class="layui-form-label">文章内容：</label>
 									<div class="layui-input-block">
 										<textarea class="layui-textarea layui-hide" name="content" lay-verify="content" id="LAY_demo_editor"></textarea>
 									</div>
 								</div>
-
+								<div class="layui-form-item">
+									<label class="layui-form-label">关键字：</label>
+									<div class="layui-input-block">
+										<input type="text" name="laiyuan" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+									</div>
+								</div>
+								<div class="layui-form-item layui-form-text">
+									<label class="layui-form-label">描述：</label>
+									<div class="layui-input-block">
+										<textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+									</div>
+								</div>
 								<div class="layui-form-item">
 									<label class="layui-form-label">文章来源：</label>
 									<div class="layui-input-block">
@@ -121,20 +92,6 @@
 									</div>
 								</div>
 							</div>
-							<div class="layui-tab-item">
-								<div class="layui-form-item">
-									<label class="layui-form-label">关键字：</label>
-									<div class="layui-input-block">
-										<input type="text" name="laiyuan" placeholder="请输入关键字" autocomplete="off" class="layui-input">
-									</div>
-								</div>
-								<div class="layui-form-item layui-form-text">
-									<label class="layui-form-label">描述：</label>
-									<div class="layui-input-block">
-										<textarea placeholder="请输入内容" class="layui-textarea"></textarea>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 					<div class="layui-form-item" style="padding-left: 10px;">
@@ -144,7 +101,6 @@
 						</div>
 					</div>
 				</form>
-			</div>
 		</div>
 		<script type="text/javascript">
 			var SCOPE = {
@@ -164,15 +120,13 @@
 		<script src="../../static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			
-			layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog', 'common', 'tool', 'element', 'upload', 'layedit'], function() {
+			layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog',  'element', 'upload', 'layedit'], function() {
 				var form = layui.form(),
 					layer = layui.layer,
 					$ = layui.jquery,
 					laypage = layui.laypage,
 					laydate = layui.laydate,
 					layedit = layui.layedit,
-					common = layui.common,
-					tool = layui.tool,
 					element = layui.element(),
 					dialog = layui.dialog;
 
